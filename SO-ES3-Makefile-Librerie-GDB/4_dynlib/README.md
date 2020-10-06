@@ -28,4 +28,4 @@ Effettuare i seguenti passi:
 	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff98d019000)
 	/lib64/ld-linux-x86-64.so.2 (0x00007ff98d811000)
 ```
-- Lanciare l'eseguibile calc
+- Lanciare l'eseguibile generato ``calc``
