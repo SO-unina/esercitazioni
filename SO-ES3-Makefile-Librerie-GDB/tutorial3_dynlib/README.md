@@ -1,4 +1,6 @@
-#Tutorial 3
+# Libreria dinamica
+
+
 #1: Osservate come viene compilata una libreria dinamica 
 #2: digitare "make -f MakefileShLib" per compilare
 #3: digitare "make -f MakefileShLib clean" per pulire la compilazione
