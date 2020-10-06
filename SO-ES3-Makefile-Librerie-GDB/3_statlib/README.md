@@ -3,7 +3,7 @@
 In questo esempio si vuole generare una libreria statica che racchiude le funzionalità di somma e prodotto definite nel file ``mat.c`` e ``mat.h``.
 Tale libreria viene utilizzata nel codice ``main.c``
 
-Supponendo di chiamare la libreria statica ``calc``, per poter compilare tale libreria come statica è necessario eseguire il comando:
+Supponendo di chiamare la libreria statica ``mat``, per poter compilare tale libreria come statica è necessario eseguire il comando:
 
 ```ar rcs libmat.a mat.o```
 
