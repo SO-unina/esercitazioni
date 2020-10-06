@@ -40,7 +40,7 @@ N.B.: Se non esportaste correttamente la variabile d'ambiente ``LD_LIBRARY_PATH`
 
 - Lanciare l'eseguibile generato ``calc``
 
-Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è possibile utilizzare i flag ``-rdynamic`` e ``-ldl``
+Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è possibile utilizzare i flag ``-rdynamic`` e ``-ldl``.
 Il flag ``-ldl`` impone al linker di trovare e collegare la libreria dinamica ``libdl.so``, riuscendo ad attivare il caricamento dinamico delle librerie dinamiche.
 Il flag ``rdynamic`` istruisce il linker ad aggiungere tutti i simboli, non solo quelli utilizzati dalla libreria, alla tabella dei simboli dinamici.
 
