@@ -1,5 +1,5 @@
 # Esercitazioni del corso di Sistemi Operativi - A.A. 2020-2021
-## Proff. Cinque, Cotroneo, Natella
+###### Proff. Cinque, Cotroneo, Natella
 
 Sommario delle esercitazioni:
 
