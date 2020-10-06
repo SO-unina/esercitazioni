@@ -1,14 +1,16 @@
-# Disassemblare un file ELF (file oggetto, librerie, etc.)
+# Disassemblare un file ELF
 
-- Step 1: compilare un file c e generare un file oggetto
+In questo esempio si vuole mostrare come effettuare il dump di un file oggetto. 
+
+- Compilare un file c e generare un file oggetto
 
 ```gcc -c -g mat.c```
 
-N.B.: il flag ``-g`` e' richiesto per mostrare il codice C durante il "disassemblaggio"
+N.B.: il flag ``-g`` e' richiesto per attivare la compilazione dei simboli di debug e mostrare il codice C durante il "disassemblaggio"
 
-- Step 2: usare objdump per fare il reversing di un file ELF
+- Utilizzare il comando ``objdump`` per fare il reverse di un file ELF
 
-Per mostrare i contenuti di tutti gli header (provate a riconoscere le sezioni (text,bss,..)
+Per mostrare i contenuti di tutti gli header (provate a riconoscere le sezioni (text,bss,..) eseguire il comando:
 
 ```objdump -x [nome file]``` 
 
