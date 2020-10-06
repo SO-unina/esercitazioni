@@ -28,7 +28,7 @@ Effettuare i seguenti passi:
 	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff98d019000)
 	/lib64/ld-linux-x86-64.so.2 (0x00007ff98d811000)
 ```
-N.B.: Se non esportaste correttamente la variabile d'ambiente ``LD_LIBRARY_PATH``, otterreste il seguente output:
+> **_N.B.:_** Se non esportaste correttamente la variabile d'ambiente ``LD_LIBRARY_PATH``, otterreste il seguente output:
 
 ```
 # ldd calc
