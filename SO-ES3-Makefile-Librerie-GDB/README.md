@@ -2,7 +2,6 @@
 
 In questa lezione esercitativa sono affrontati i seguenti problemi:
 
-- Ciclo di sviluppo e modularizzazione
 - Makefiles
 - Librerie
 
