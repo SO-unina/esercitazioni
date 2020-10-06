@@ -22,5 +22,7 @@ effettuare una pulizia dei file oggetto e i file eseguibili generate durante la 
 
 ```
 	clean: 
-		rm -rf 
+		rm -rf *.o
+		rm -rf executable
 ```
+N.B.: Osservare come viene utilizzata la wildcard ``*.o`` per indicare tutti i file che terminano con l'estensione ``.o
