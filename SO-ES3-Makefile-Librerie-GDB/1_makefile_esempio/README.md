@@ -15,7 +15,8 @@ Una **regola** di un makefile segue la seguente sintassi:
 ```
 
 Dato un particolare target, make esegue i comandi presenti alla linea successiva, se le dipendenze sono tutte soddisfatte.
-Le dipendenze sono file da cui il target dipende. ``> **_NOTE:_**: l'etichetta [tab] indica il carattere che si ottiene con il tasto TAB della tastiera. Tale carattere è necessario, altrimenti otterremo un errore di interpretazione.``
+Le dipendenze sono file da cui il target dipende. 
+> **_N.B.:_** l'etichetta [tab] indica il carattere che si ottiene con il tasto TAB della tastiera. Tale carattere è necessario, altrimenti otterremo un errore di interpretazione.
 
 Per questioni di utilità, spesso viene sempre aggiunta la regola di clean all'interno di un Makefile. Questa regola (senza dipendenze) permette di
 effettuare una pulizia dei file oggetto e i file eseguibili generate durante la compilazione. E.g.:
@@ -25,7 +26,7 @@ effettuare una pulizia dei file oggetto e i file eseguibili generate durante la 
                 rm -rf *.o
                 rm -rf executable
 ```
-> **_NOTE:_** Osservare come viene utilizzata la wildcard ``*.o`` per indicare tutti i file che terminano con l'estensione ``.o``
+> **_N.B.:_** Osservare come viene utilizzata la wildcard ``*.o`` per indicare tutti i file che terminano con l'estensione ``.o``
 
 Inoltre, in un Makefile è possibile utilizzare variabili. Una variabile è inizializzata usando la sintassi ``NOME_VARIABILE=VALORE``. Per accedere al valore della variabile basta utilizzare la sintassi ``${NOVA_VARIABILE}``.
 Analizzare il file ``Makefile2`` per osservare come sono utilizzate le variabili per definire le varie regole.
