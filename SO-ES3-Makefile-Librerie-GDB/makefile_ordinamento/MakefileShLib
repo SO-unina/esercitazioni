@@ -1,0 +1,22 @@
+all: provaOrdShLib
+
+provaOrdShLib: vettore.o algord.so provaOrd.o
+	g++ -o provaOrdShLib provaOrd.o vettore.o -L./ -lalgord
+
+algord.so: alg_ord.o
+	g++ -shared -Wl,-soname,libalgord.so -o libalgord.so alg_ord.o
+
+alg_ord.o: alg_ord.cpp alg_ord.h
+	g++ -fpic -c alg_ord.cpp
+
+vettore.o: vettore.cpp vettore.h
+	g++ -c vettore.cpp
+
+provaOrd.o: provaOrd.cpp vettore.h alg_ord.h
+	g++ -c provaOrd.cpp
+
+clean:
+	rm -f *.o
+	rm -f ./provaOrdShLib
+	rm -f ./libalgord.so
+	rm -f *~

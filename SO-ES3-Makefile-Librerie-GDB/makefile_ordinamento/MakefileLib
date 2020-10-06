@@ -1,0 +1,22 @@
+all: provaOrdLib
+
+provaOrdLib: vettore.o algord.a provaOrd.o
+	g++ -o provaOrdLib provaOrd.o vettore.o -L./ -lalgord
+
+algord.a: alg_ord.o
+	ar rcs libalgord.a alg_ord.o
+
+alg_ord.o: alg_ord.cpp alg_ord.h
+	g++ -c alg_ord.cpp
+
+vettore.o: vettore.cpp vettore.h
+	g++ -c vettore.cpp
+
+provaOrd.o: provaOrd.cpp vettore.h alg_ord.h
+	g++ -c provaOrd.cpp
+
+clean:
+	rm -f *.o
+	rm -f ./provaOrdLib
+	rm -f ./libalgord.a
+	rm -f *~

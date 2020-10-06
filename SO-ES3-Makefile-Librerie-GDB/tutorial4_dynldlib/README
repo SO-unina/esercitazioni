@@ -1,0 +1,6 @@
+#Tutorial 4 - Caricamento dinamico di una shared library
+#
+#1: digitare "make -f MakefileShLib" per compilare (osservate le opzioni di compilazione del main_dyn)
+#2: Adesso non dovete piu' collegare la variabile d'ambiente LD_LIBRARY_PATH con la directory corrente: Perche'?
+#3: "ldd calc" ispezionare le librerie
+#4: ./calc 

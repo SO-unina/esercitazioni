@@ -1,0 +1,23 @@
+CPP = g++
+CPPFLAGS = -c -o
+LDFLAGS = -o
+DEPS = lib.h
+OBJ = lib.o main.o
+
+all: start
+
+start: $(OBJ)
+	$(CPP) $(LDFLAGS) $@ $^
+
+%.o: %.cpp $(DEPS)
+	$(CPP) $(CPPFLAGS) $@ $<
+
+clean:
+	rm -f *.o
+	rm -f ./start 
+	rm -f *~
+
+# Variabili speciali
+# $@ = il target della regola
+# $^ = la lista delle dipendenze
+# $< = la prima dipendenza

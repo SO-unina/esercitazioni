@@ -1,0 +1,6 @@
+#Tutorial 2
+#cambiare il percorso assoluto in curr con il percorso corrente
+#CURR= $(PWD)
+#1: Osservate come viene compilata una libreria statica nella regola libmat.a 
+#2: digitare make
+#3: digitare make clean

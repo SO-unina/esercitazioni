@@ -1,0 +1,20 @@
+CURR = $(PWD)
+
+all: calc
+
+calc: mat.so main.o
+	gcc -o calc main.o -L$(CURR)/ -lmat
+
+main.o: 
+	gcc -c main.c
+
+mat.so: mat.o
+	gcc -shared -Wl,-soname,libmat.so -o libmat.so mat.o
+
+mat.o: mat.h
+	gcc -c -fpic mat.c
+
+clean:
+	rm -f *.o
+	rm -f ./calc
+	rm -f libmat.so
