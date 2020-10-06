@@ -26,3 +26,6 @@ effettuare una pulizia dei file oggetto e i file eseguibili generate durante la 
 		rm -rf executable
 ```
 N.B.: Osservare come viene utilizzata la wildcard ``*.o`` per indicare tutti i file che terminano con l'estensione ``.o``
+
+In un file ``Makefile``è possibile definire anche delle variabili. La sintassi è ``NOME_VARIABILE = VALORE``. Analizzare il file ``Makefile2`` e provare
+a lanciare il comando make utilizzando tale makefile.
