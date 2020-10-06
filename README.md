@@ -1,4 +1,7 @@
-# Esercitazioni del corso di Sistemi Operativi - A.A. 2020-2021
+# Esercitazioni del corso di Sistemi Operativi - A.A. 2020-2021 <img src="https://github.com/SO-unina/esercitazioni/blob/main/images/SO-unina_logo.png" width="100">
+
+
+
 #### Proff. Cinque, Cotroneo, Natella
 
 Sommario delle esercitazioni:
