@@ -16,5 +16,14 @@ Effettuare i seguenti passi:
 
   ``export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD``
 
-- Osservare l'output del comando ``ldd calc`` che mostrerà le dipendenze (altre librerie dinamiche) della libreria dinamica in oggetto
+- Osservare l'output del comando ``ldd calc`` che mostrerà le dipendenze (altre librerie dinamiche) della libreria dinamica in oggetto. E.g.:
+
+```
+# ldd calc
+  linux-vdso.so.1 (0x00007ffdaf757000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007ff98d40a000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff98d019000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007ff98d811000)
+```
+  
 - Lanciare l'eseguibile ``calc``
