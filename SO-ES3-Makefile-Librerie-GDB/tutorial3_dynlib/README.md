@@ -20,7 +20,7 @@ Effettuare i seguenti passi:
 
 ```
 # ldd calc
-  linux-vdso.so.1 (0x00007ffdaf757000)
+	linux-vdso.so.1 (0x00007ffdaf757000)
 	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007ff98d40a000)
 	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff98d019000)
 	/lib64/ld-linux-x86-64.so.2 (0x00007ff98d811000)
