@@ -1,4 +1,4 @@
-CURR=/home/frank/Desktop/LinuxCode/Libraries/
+CURR=${PWD}
 
 all: calcola
 
