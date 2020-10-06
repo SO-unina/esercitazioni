@@ -1,4 +1,4 @@
-# Libreria dinamica
+# Libreria dinamica (shared library)
 
 In questo esempio si vuole generare una libreria dinamica che racchiuda le funzionalità di somma e prodotto definite nel file ``mat.c`` e ``mat.h``. Tale libreria viene utilizzata nel codice ``main.c``
 
@@ -28,4 +28,20 @@ Effettuare i seguenti passi:
 	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff98d019000)
 	/lib64/ld-linux-x86-64.so.2 (0x00007ff98d811000)
 ```
+N.B.: Se non esportaste correttamente la variabile d'ambiente ``LD_LIBRARY_PATH``, otterreste il seguente output:
+
+```
+# ldd calc
+	linux-vdso.so.1 (0x00007ffd17f8a000)
+	libmat.so => not found
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f4b4c797000)
+	/lib64/ld-linux-x86-64.so.2 (0x00007f4b4cd8b000)
+```
+
 - Lanciare l'eseguibile generato ``calc``
+
+Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è possibile utilizzare i flag ``-rdynamic`` e ``-ldl``
+Il flag ``-ldl`` impone al linker di trovare e collegare la libreria dinamica ``libdl.so``, riuscendo ad attivare il caricamento dinamico delle librerie dinamiche.
+Il flag ``rdynamic`` istruisce il linker ad aggiungere tutti i simboli, non solo quelli utilizzati dalla libreria, alla tabella dei simboli dinamici.
+
+- Provare a 
