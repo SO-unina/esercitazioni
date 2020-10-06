@@ -15,4 +15,12 @@ Una **regola** di un makefile segue la seguente sintassi:
 ```
 
 Dato un particolare target, make esegue i comandi presenti alla linea successiva, se le dipendenze sono tutte soddisfatte.
-Le dipendenze sono file da cui il target dipende. ``N.B.: il carattere tab è necessario, altrimenti otterremo un errore di interpretazione.``
+Le dipendenze sono file da cui il target dipende. ``N.B.: l'etichetta [tab] indica il carattere che si ottiene con il tasto TAB della tastiera. Tale carattere è necessario, altrimenti otterremo un errore di interpretazione.``
+
+Per questioni di utilità, spesso viene sempre aggiunta la regola di clean all'interno di un Makefile. Questa regola (senza dipendenze) permette di 
+effettuare una pulizia dei file oggetto e i file eseguibili generate durante la compilazione. E.g.:
+
+```
+	clean: 
+		rm -rf 
+```
