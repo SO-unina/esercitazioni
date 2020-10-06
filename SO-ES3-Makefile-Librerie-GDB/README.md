@@ -1,9 +1,9 @@
 # SO-ES3-Makefile-Librerie-GDB
 
-In questa lezione esercitativa sono affrontati i seguenti problemi:
+In questa lezione esercitativa sono affrontati i Makefiles e lo sviluppo di librerie statiche e dinamiche.
+Sommario degli esempi:
 
-- Makefiles
-- Librerie
-
-Riferimenti
-- Mettere link
+- **1_makefile_esempio**: Utilizzo di base dei Makefile;
+- **2_elfdumping**: Ottenere il dump di un file oggetto;
+- **3_statlib**: Sviluppo libreria statica;
+- **4_dynlib**: Sviluppo libreria dinamica;
