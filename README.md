@@ -1,4 +1,5 @@
-# Repository per le esercitazioni del corso di Sistemi Operativi
+# Esercitazioni del corso di Sistemi Operativi - A.A. 2020-2021
+## Proff. Cinque, Cotroneo, Natella
 
 Sommario delle esercitazioni:
 
