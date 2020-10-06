@@ -44,4 +44,10 @@ Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è 
 Il flag ``-ldl`` impone al linker di trovare e collegare la libreria dinamica ``libdl.so``, riuscendo ad attivare il caricamento dinamico delle librerie dinamiche.
 Il flag ``rdynamic`` istruisce il linker ad aggiungere tutti i simboli, non solo quelli utilizzati dalla libreria, alla tabella dei simboli dinamici.
 
-- Provare a 
+- Provare a pulire gli artefatti di compilazione precedenti (``make -f MakefileShLib clean``)
+- Compilare utilizzando il makefile ``MakefileShLibDyn`` (``make -f MakefileShLibDyn``)
+
+L'esecuzione di ``calc`` dovrebbe andare a buon fine, senza modificare la variabile d'ambiente ``LD_LIBRARY_PATH``.
+
+
+
