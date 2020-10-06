@@ -1,6 +1,6 @@
 # Libreria dinamica
 
-In questo esempio si vuole generare una libreria dinamica che racchiude le funzionalità di somma e prodotto definite nel file ``mat.c`` e ``mat.h``. Tale libreria viene utilizzata nel codice ``main.c``
+In questo esempio si vuole generare una libreria dinamica che racchiuda le funzionalità di somma e prodotto definite nel file ``mat.c`` e ``mat.h``. Tale libreria viene utilizzata nel codice ``main.c``
 
 Supponendo di chiamare la libreria statica ``mat``, per poter compilare tale libreria come dinamica è necessario eseguire il comando:
 
