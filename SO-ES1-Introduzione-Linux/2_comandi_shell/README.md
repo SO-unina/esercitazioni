@@ -353,6 +353,8 @@ Da notare che anche il comando ``ps aux`` che abbiamo appena lanciato rientra tr
 Il comando ``top`` è un altra utilità per avere una vista dei processi che attualmente sono nel sistema. A differenza di ``ps``, il comando ``top`` mostra però una vista real-time dinamica dei processi, aggiungedo un *summary* delle informazioni di sistema, e.g., l'uso corrente del tempo di CPU e della RAM di sistema e l'utilizzo dell'area di swap.
 
 ```console
+$ top
+
 top - 18:49:39 up  2:45,  1 user,  load average: 0,10, 0,04, 0,01
 Tasks: 261 total,   1 running, 260 sleeping,   0 stopped,   0 zombie
 %Cpu(s):  5,6 us,  3,7 sy,  0,0 ni, 90,7 id,  0,0 wa,  0,0 hi,  0,0 si,  0,0 st
@@ -372,5 +374,6 @@ MiB Swap:   1873,4 total,   1846,0 free,     27,4 used.    929,6 avail Mem
      10 root      20   0       0      0      0 S   0,0   0,0   0:02.37 ksoftirqd/0
      11 root      20   0       0      0      0 I   0,0   0,0   0:03.41 rcu_sched
 ...
+```
 
 > **_N.B.:_** Il programma ``top`` termina quando si digita il carattere ``q``.
