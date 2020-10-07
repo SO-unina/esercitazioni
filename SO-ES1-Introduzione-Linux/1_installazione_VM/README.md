@@ -14,57 +14,58 @@ Tale file è stato creato per mezzo del programma **Oracle**** VirtualBox**, che
 
 La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtuale) è la versione **5.2.18 (r124319)**.
 
-![](RackMultipart20201007-4-91r9la_html_b45abba01326c39b.png)
+![](../images/image001.png)
 
 Una volta installato VirtualBox è possibile **importare** la macchina virtuale, scegliendo &#39; **File -\&gt; Importa applicazione virtuale**&#39; come in figura:
 
-![](RackMultipart20201007-4-91r9la_html_3f05ee3d77bf498a.png)
+![](../images/image002.png)
 
 Appare la seguente form dove inserire **il percorso del file &#39;.ova&#39;** con la macchina virtuale da caricare:
 
-![](RackMultipart20201007-4-91r9la_html_4edc7ef3a0275b55.gif) ![](RackMultipart20201007-4-91r9la_html_410f508da4d53f4e.gif) ![](RackMultipart20201007-4-91r9la_html_ec0575629e02d50b.gif)
+
+![](../images/image005.png)
 
 Cliccare qui per selezionare il file .ova
 
- ![](RackMultipart20201007-4-91r9la_html_16b84b0a080c52cf.png)
+![](../images/image006.png)
 
 Cliccare l&#39;icona a destra del campo di testo (il bottone evidenziato in rosso nell&#39;immagine precedente), scegliere il file di estensione &#39;.ova&#39;.
 
-![](RackMultipart20201007-4-91r9la_html_afdd3c52655e4a64.png)
+![](../images/image007.png)
 
 Cliccando su **&#39;Continua&#39;** , dopo pochi minuti la macchina virtuale sarà importata in VirtualBox. La macchina virtuale apparirà a sinistra nella schermata principale di VirtualBox.
 
-![](RackMultipart20201007-4-91r9la_html_858eb14ff029c510.png)
+![](../images/image008.png)
 
 Per avviare la macchina virtuale, **cliccare sul nome della macchina virtuale** nell&#39;elenco a sinistra, e poi sul tasto &#39; **Avvia**&#39; in alto nella schermata. Prima di avviare la VM è possibile scegliere di personalizzare l&#39;hardware virtuale da utilizzare cliccando sul tasto &#39; **Impostazioni&#39;**. La raccomandazione è quella di avere almeno **2 CPU virtuali** e almeno **2Gb di memoria RAM**.
 
 Dopo l&#39;avvio, apparirà una nuova finestra in cui eseguirà il sistema operativo Linux. Al termine dell&#39;avvio del sistema operativo, la macchina virtuale apparirà come segue:
 
-![](RackMultipart20201007-4-91r9la_html_5c00033f5939c5d7.png)
+![](../images/image009.png)
 
 In alternativa a VirtualBox, è possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
 
-![](RackMultipart20201007-4-91r9la_html_c8db421c3e56eb70.png)
+![](../images/image010.png)
 
 Per importare la macchina virtuale in VMware Workstation Player, si selezioni la voce **&quot;Importa...&quot;**.
 
-![](RackMultipart20201007-4-91r9la_html_c09346679102c20d.png)
+![](../images/image011.png)
 
 Si aprirà una nuova finestra, in cui accorrerà scegliere il file **&quot;.ova&quot;** della macchina virtuale.
 
-![](RackMultipart20201007-4-91r9la_html_a970ad7c33e4c5dc.png)
+![](../images/image012.png)
 
 Nel caso dovesse apparire il seguente popup sulla &quot;verifica di conformità&quot;, selezionare l&#39;opzione **&quot;Riprova&quot;** per forzare l&#39;importazione.
 
-![](RackMultipart20201007-4-91r9la_html_850d8a3a15c235d6.png)
+![](../images/image013.png)
 
 L&#39;importazione della macchina virtuale potrebbe richiedere svariati minuti, dipendentemente dalla potenza della macchine fisica ospitante.
 
-![](RackMultipart20201007-4-91r9la_html_9093e0d3bcca689f.png)
+![](../images/image014.png)
 
 Come per VirtualBox, al termine dell&#39;operazione, è possibile scegliere di personalizzare l&#39;hardware virtuale da utilizzare per la VM importata oppure proseguire con i valori di default. La raccomandazione è quella di avere almeno 2 CPU virtuali e almeno 2Gb di memoria RAM.
 
-![](RackMultipart20201007-4-91r9la_html_ab6065f3b163f740.png)
+![](../images/image015.png)
 
 La macchina virtuale dovrà apparire correttamente nella libreria di VMware Workstation Player.
 
