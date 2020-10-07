@@ -1,27 +1,49 @@
 # Esercizio 1. Makefile
 
-In questo esempio si vuole mostrare come è possibile scrivere un Makefile ed utilizzare il comando ``make``.
+In questo esempio si vuole mostrare come è possibile scrivere un **Makefile** ed utilizzare il comando ``make``.
 
-Il comando ``make`` è un utility usata specialmente per semplificare la compilazione separata di programmi composti da più file sorgente e librerie.
-Digitando ``make`` il comando cerca un file di nome ``Makefile`` nella directory corrente, lo interpreta ed esegue le regole ivi contenute.
+Il comando ``make`` è un utility utilizzata specialmente per semplificare la compilazione separata di programmi composti da più file sorgente e librerie.
+Digitando ``make`` il comando cerca un file di nome ``Makefile`` (N.B.: la stringa è case-sensitive) nella directory corrente, lo interpreta ed esegue le regole ivi contenute.
 
-Alternativamente con ``make –f MakefileNAME``, il comando interpreta il makefile di nome ``MakefileNAME``.
+Alternativamente con ``make –f MakefileNAME``, imponiamo al comando ``make`` di interpretare un makefile di nome ``MakefileNAME``.
 
 Una **regola** di un makefile segue la seguente sintassi:
 
-```
+```shell
         target: dipendenze
         [tab]   comando di sistema
 ```
 
-Dato un particolare target, make esegue i comandi presenti alla linea successiva, se le dipendenze sono tutte soddisfatte.
-Le dipendenze sono file da cui il target dipende. 
+Dato un particolare **target**, ``make`` esegue i comandi presenti alla linea successiva, se le dipendenze sono tutte soddisfatte.
+Le dipendenze sono semplicemente file da cui il target dipende. 
+
 > **_N.B.:_** l'etichetta [tab] indica il carattere che si ottiene con il tasto TAB della tastiera. Tale carattere è necessario, altrimenti otterremo un errore di interpretazione.
 
-Per questioni di utilità, spesso viene sempre aggiunta la regola di clean all'interno di un Makefile. Questa regola (senza dipendenze) permette di
-effettuare una pulizia dei file oggetto e i file eseguibili generate durante la compilazione. E.g.:
+Il file **Makefile** utilizzato in quest'esercitazione è il seguente:
 
+```shell
+all: start
+
+start: lib.o main.o
+	g++ -o start lib.o main.o
+
+lib.o: lib.cpp lib.h
+	g++ -c lib.cpp
+
+main.o: main.cpp lib.h
+	g++ -c main.cpp
+
+clean:
+	rm -f *.o
+	rm -f ./start
+	rm -f *~
 ```
+
+Possiamo notare che la prima regola (``all``) dipende dal file ``start``, la quale dipende a sua volta dai file ``lib.o`` e ``main.o``, e così via fino ad arrivare ad una regola risolvibie.
+
+Per questioni di utilità, spesso viene sempre aggiunta una regola di **clean** all'interno di un Makefile. Questa regola (senza dipendenze) permette di effettuare una pulizia dei file oggetto e dei file eseguibili generati durante la compilazione. E.g.:
+
+```shell
         clean:
                 rm -rf *.o
                 rm -rf executable
