@@ -10,8 +10,8 @@ Alternativamente con ``make –f MakefileNAME``, imponiamo al comando ``make`` d
 Una **regola** di un makefile segue la seguente sintassi:
 
 ```make
-	target: dipendenze
-	[tab]   comando di sistema
+target: dipendenze
+	[tab] comando di sistema
 ```
 
 Dato un particolare **target**, ``make`` esegue i comandi presenti alla linea successiva, se le dipendenze sono tutte soddisfatte.
