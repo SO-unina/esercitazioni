@@ -101,6 +101,4 @@ Come per VirtualBox, al termine dell'operazione, è possibile scegliere di perso
 La macchina virtuale dovrà apparire correttamente nella libreria di VMware Workstation Player.
 
 
-**NOTE IMPORTANTI**
-
-Per effettuare operazioni di amministrazione (ad esempio, installazione di pacchetti, il comando sudo, etc.), si utilizzi la password ' **so**' (nome utente: ' **so**').
+> **_N.B.:_** Per effettuare operazioni di amministrazione (ad esempio, installazione di pacchetti, il comando sudo, etc.), si utilizzi la password ' **so**' (nome utente: ' **so**').
