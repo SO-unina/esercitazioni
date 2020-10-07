@@ -43,10 +43,10 @@ Possiamo notare che la prima regola (``all``) dipende dal file ``start``, la qua
 
 Per questioni di utilità, spesso viene sempre aggiunta una regola di **clean** all'interno di un Makefile. Questa regola (senza dipendenze) permette di effettuare una pulizia dei file oggetto e dei file eseguibili generati durante la compilazione. E.g.:
 
-```shelmake
-        clean:
-                rm -rf *.o
-                rm -rf executable
+```make
+clean:
+	rm -rf *.o
+   	rm -rf executable
 ```
 > **_N.B.:_** Osservare come viene utilizzata la wildcard ``*.o`` per indicare tutti i file che terminano con l'estensione ``.o``
 
