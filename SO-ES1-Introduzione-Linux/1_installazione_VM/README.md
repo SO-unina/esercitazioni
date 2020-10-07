@@ -16,9 +16,11 @@ La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtu
 
 Una volta installato VirtualBox è possibile **importare** la macchina virtuale, scegliendo ' **File -> Importa applicazione virtuale**' come in figura:
 
-<div style="text-align:center">
-<img src="../images/image002.png" width="300" > 
-</div>
+<p align="center">
+<img src="../images/image002.png" width="300">
+</p> 
+
+
 
 Appare la seguente form dove inserire **il percorso del file .ova** con la macchina virtuale da caricare:
 
