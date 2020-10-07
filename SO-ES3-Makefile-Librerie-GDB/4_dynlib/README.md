@@ -18,11 +18,14 @@ Effettuare i seguenti passi:
 
 - Prima di lanciare il file eseguibile calc generato, aggiornare la variabile d'ambiente LD_LIBRARY_PATH con la directory corrente. A tal scopo, posizionarsi all'interno della directory dove è generata la libreria dinamica ed eseguire il comando:
 
-  ``export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD``
-
-  Osservare l'output del comando ldd calc che mostrerà le dipendenze (altre librerie dinamiche) della libreria dinamica in oggetto. E.g.:
+```console
+$ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$PWD
 ```
-# ldd calc
+
+Osservare l'output del comando ldd calc che mostrerà le dipendenze (altre librerie dinamiche) della libreria dinamica in oggetto. E.g.:
+
+```console
+$ ldd calc
 	linux-vdso.so.1 (0x00007ffdaf757000)
 	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x00007ff98d40a000)
 	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007ff98d019000)
@@ -30,8 +33,8 @@ Effettuare i seguenti passi:
 ```
 > **_N.B.:_** Se non esportaste correttamente la variabile d'ambiente ``LD_LIBRARY_PATH``, otterreste il seguente output:
 
-```
-# ldd calc
+```console
+$ ldd calc
 	linux-vdso.so.1 (0x00007ffd17f8a000)
 	libmat.so => not found
 	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f4b4c797000)
