@@ -14,7 +14,7 @@ In Ubuntu, il package manager a linea di comando è l'applicazione ``apt``
 
 Per poter installare i manuali per le librerie basate su POSIX (e.g., IPC, etc.), e installare tutti gli applicativi di sistema (e.g., make, gcc, etc.), eseguire i seguenti comandi con ``sudo``:
 
-```
+```bash
 sudo apt-get install manpages-posix
 sudo apt-get install manpages-posix-dev
 sudo apt-get install build-essential
