@@ -26,21 +26,21 @@ Appare la seguente form dove inserire **il percorso del file .ova** con la macch
 
 
 <p align="center">
-<img src="../images/image005.png" width="300" > 
+<img src="../images/image005.png" width="500" > 
 </p>
 
 
 Cliccare qui per selezionare il file .ova
 
 <p align="center">
-<img src="../images/image006.png" width="300" > 
+<img src="../images/image006.png" width="500" > 
 </p>
 
 
 Cliccare l'icona a destra del campo di testo (il bottone evidenziato in rosso nell'immagine precedente), scegliere il file di estensione '.ova'.
 
 <p align="center">
-<img src="../images/image007.png" width="300" > 
+<img src="../images/image007.png" width="500" > 
 </p>
 
 
@@ -52,14 +52,14 @@ Per avviare la macchina virtuale, **cliccare sul nome della macchina virtuale** 
 Dopo l'avvio, apparirà una nuova finestra in cui eseguirà il sistema operativo Linux. Al termine dell'avvio del sistema operativo, la macchina virtuale apparirà come segue:
 
 <p align="center">
-<img src="../images/image008.png" width="300" > 
+<img src="../images/image008.png" width="500" > 
 </p>
 
 
 In alternativa a VirtualBox, è possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
 
 <p align="center">
-<img src="../images/image009.png" width="300" > 
+<img src="../images/image009.png" width="500" > 
 </p>
 
 
@@ -73,7 +73,7 @@ Per importare la macchina virtuale in VMware Workstation Player, si selezioni la
 Si aprirà una nuova finestra, in cui accorrerà scegliere il file **.ova** della macchina virtuale.
 
 <p align="center">
-<img src="../images/image011.png" width="300" > 
+<img src="../images/image011.png" width="500" > 
 </p>
 
 
@@ -87,14 +87,14 @@ Nel caso dovesse apparire il seguente popup sulla verifica di conformità, selez
 L'importazione della macchina virtuale potrebbe richiedere svariati minuti, dipendentemente dalla potenza della macchine fisica ospitante.
 
 <p align="center">
-<img src="../images/image013.png" width="300" > 
+<img src="../images/image013.png" width="500" > 
 </p>
 
 
 Come per VirtualBox, al termine dell'operazione, è possibile scegliere di personalizzare l'hardware virtuale da utilizzare per la VM importata oppure proseguire con i valori di default. La raccomandazione è quella di avere almeno 2 CPU virtuali e almeno 2Gb di memoria RAM.
 
 <p align="center">
-<img src="../images/image014.png" width="300" > 
+<img src="../images/image014.png" width="500" > 
 </p>
 
 
