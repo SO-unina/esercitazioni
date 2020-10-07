@@ -25,23 +25,23 @@ Una volta installato VirtualBox è possibile **importare** la macchina virtuale,
 Appare la seguente form dove inserire **il percorso del file .ova** con la macchina virtuale da caricare:
 
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image005.png" width="300" > 
-</div>
+</p>
 
 
 Cliccare qui per selezionare il file .ova
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image006.png" width="300" > 
-</div>
+</p>
 
 
 Cliccare l'icona a destra del campo di testo (il bottone evidenziato in rosso nell'immagine precedente), scegliere il file di estensione '.ova'.
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image007.png" width="300" > 
-</div>
+</p>
 
 
 Cliccando su **Continua** , dopo pochi minuti la macchina virtuale sarà importata in VirtualBox. La macchina virtuale apparirà a sinistra nella schermata principale di VirtualBox.
@@ -51,51 +51,51 @@ Per avviare la macchina virtuale, **cliccare sul nome della macchina virtuale** 
 
 Dopo l'avvio, apparirà una nuova finestra in cui eseguirà il sistema operativo Linux. Al termine dell'avvio del sistema operativo, la macchina virtuale apparirà come segue:
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image008.png" width="300" > 
-</div>
+</p>
 
 
 In alternativa a VirtualBox, è possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image009.png" width="300" > 
-</div>
+</p>
 
 
 Per importare la macchina virtuale in VMware Workstation Player, si selezioni la voce **Importa...**.
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image010.png" width="300" > 
-</div>
+</p>
 
 
 Si aprirà una nuova finestra, in cui accorrerà scegliere il file **.ova** della macchina virtuale.
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image011.png" width="300" > 
-</div>
+</p>
 
 
 Nel caso dovesse apparire il seguente popup sulla verifica di conformità, selezionare l'opzione **Riprova** per forzare l'importazione.
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image012.png" width="300" > 
-</div>
+</p>
 
 
 L'importazione della macchina virtuale potrebbe richiedere svariati minuti, dipendentemente dalla potenza della macchine fisica ospitante.
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image013.png" width="300" > 
-</div>
+</p>
 
 
 Come per VirtualBox, al termine dell'operazione, è possibile scegliere di personalizzare l'hardware virtuale da utilizzare per la VM importata oppure proseguire con i valori di default. La raccomandazione è quella di avere almeno 2 CPU virtuali e almeno 2Gb di memoria RAM.
 
-<div style="text-align:center">
+<p align="center">
 <img src="../images/image014.png" width="300" > 
-</div>
+</p>
 
 
 La macchina virtuale dovrà apparire correttamente nella libreria di VMware Workstation Player.
