@@ -51,5 +51,5 @@ clean:
 > **_N.B.:_** Osservare come viene utilizzata la wildcard ``*.o`` per indicare tutti i file che terminano con l'estensione ``.o``
 
 Inoltre, in un Makefile è possibile utilizzare variabili. Una variabile è inizializzata usando la sintassi ``NOME_VARIABILE=VALORE``. Per accedere al valore della variabile basta utilizzare la sintassi ``${NOVA_VARIABILE}``.
-Analizzare il file ``Makefile2`` per osservare come sono utilizzate le variabili per definire le varie regole.
+Analizzare il file [``Makefile2``](Makefile2) per osservare come sono utilizzate le variabili per definire le varie regole.
 
