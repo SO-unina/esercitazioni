@@ -2,6 +2,6 @@
 
 Sommario delle esercitazioni:
 
-- [**SO-ES1-Introduzione-Linux**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES1-Introduzione-Linux): Esercitazione su Linux.
+- [**SO-ES1-Introduzione-Linux**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES1-Introduzione-Linux): Installazione VM Linux e comandi shell
 
-- [**SO-ES3-Makefile-Librerie-GDB**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES3-Makefile-Librerie-GDB): Esercitazione sull'utilizzo di Makefile e librerie.
+- [**SO-ES3-Makefile-Librerie-GDB**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES3-Makefile-Librerie-GDB): Utilizzo di Makefile e librerie.
