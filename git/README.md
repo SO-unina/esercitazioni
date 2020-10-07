@@ -10,7 +10,7 @@ Successivamente, il workflow è quello di aggiungere dei cambiamenti (dei conten
 Quindi, per utilizzare la repository delle esercitazioni del corso di Sistemi Operativi, i comandi base sono i seguenti:
 
 ```console
-$ git clone https://github.com/SO-unina/esercitazioni$ # Aggiungere dei file$ git add <file>
+$ git clone https://github.com/SO-unina/esercitazioni$ # Aggiungere (eventualmente) dei file$ git add <file>
 $ git commit -m "Commit dei file"
 $ git push origin master
 ```
