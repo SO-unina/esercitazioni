@@ -9,7 +9,7 @@ Alternativamente con ``make –f MakefileNAME``, imponiamo al comando ``make`` d
 
 Una **regola** di un makefile segue la seguente sintassi:
 
-```shell
+```make
         target: dipendenze
         [tab]   comando di sistema
 ```
@@ -21,7 +21,7 @@ Le dipendenze sono semplicemente file da cui il target dipende.
 
 Il file **Makefile** utilizzato in quest'esercitazione è il seguente:
 
-```shell
+```make
 all: start
 
 start: lib.o main.o
@@ -43,7 +43,7 @@ Possiamo notare che la prima regola (``all``) dipende dal file ``start``, la qua
 
 Per questioni di utilità, spesso viene sempre aggiunta una regola di **clean** all'interno di un Makefile. Questa regola (senza dipendenze) permette di effettuare una pulizia dei file oggetto e dei file eseguibili generati durante la compilazione. E.g.:
 
-```shell
+```shelmake
         clean:
                 rm -rf *.o
                 rm -rf executable
