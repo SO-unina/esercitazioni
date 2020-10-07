@@ -8,7 +8,7 @@ Verrà generato automaticamente un file oggetto ``mat.o``
 
 > **_N.B.:_** il flag ``-g`` e' richiesto per mostrare il codice C durante il "disassemblaggio"
 
-2. Utilizzare il comando ``objdump`` per fare il reversing di un file ELF.
+2. Utilizzare il comando ``objdump`` per fare il reverse di un file ELF.
 
 Per mostrare i contenuti di tutti gli header (provate a riconoscere le sezioni (text,bss,..) utilizzare il comando
 
@@ -17,7 +17,7 @@ Per mostrare i contenuti di tutti gli header (provate a riconoscere le sezioni (
 Nel caso particolare, proviamo a fare il dump del file oggetto ``mat.o`` generato precedentemente:
 
 ```console
-$ objdump -x mat
+$ objdump -x mat.o
 
 mat.o:     formato del file elf64-x86-64
 mat.o
@@ -57,13 +57,12 @@ SYMBOL TABLE:
 
 Dallo snippet precedente è possibile osservare le varie sezioni (text, area dati globale, etc.) e la tabella dei simboli (tra cui le funzioni di ``somma`` e ``prodotto`` implementate).
 
-Tramite il ``objdump -d -S [nome file]``, è possibile ottenere il disassemblato dell'area testo di un file sorgente. Nel nostro esempio:
+Tramite il comando ``objdump -d -S [nome file]``, è possibile ottenere il disassemblato dell'area testo di un file sorgente. Nel nostro esempio:
 
 ```console
 $ objdump -d -S mat.o 
 
 mat.o:     formato del file elf64-x86-64
-
 
 Disassemblamento della sezione .text:
 
