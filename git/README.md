@@ -2,14 +2,16 @@
 
 ``git`` è un sistema di controllo delle versioni (versioning system), e mantiene l'intera storia (in termini di modifiche) di una directory.
 La directory in ``git`` è chiamata **repository**.
-Per creare (automaticamente) una prima repository basta registrarsi a [https://github.com/](https://github.com/) e creare un account. La repository che verrà create è remota (cioè risiede sul server github). 
+Per creare una prima repository basta registrarsi a [https://github.com/](https://github.com/) e creare un nuovo account. La repository che verrà creata è remota, ovvero risiede sul server github. 
 
-Per portare tale repository localmente sul proprio PC bisogna utilizzare il comando ``git clone``. 
+Per poter utilizzare tale repository localmente (sul proprio PC) bisogna utilizzare il comando ``git clone``. 
 Successivamente, il workflow è quello di aggiungere dei cambiamenti (dei contenuti) a tale repository, aggiungere i cambiamenti al *commit* corrente, effettuare il commit, ed effettuare il *push* di questi cambiamenti verso la repository remota. 
 
-Quindi, per utilizzare la repository delle esercitazioni del corso di Sistemi Operativi, i comandi base sono i seguenti:
+Per utilizzare la repository delle esercitazioni del corso di Sistemi Operativi, è possibile clonare tale repository nella propria repository personale. Assumendo nome utente ``username`` e ``my_repo`` il nome della propria repository personale, possiamo:
 
 ```console
+$ git clone https://github.com/username/my_repo
+$ cd my_repo
 $ git clone https://github.com/SO-unina/esercitazioni$ # Aggiungere (eventualmente) dei file$ git add <file>
 $ git commit -m "Commit dei file"
 $ git push origin master
