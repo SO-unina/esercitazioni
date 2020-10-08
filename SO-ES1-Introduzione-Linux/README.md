@@ -1,6 +1,8 @@
 # SO-ES1-Introduzione-Linux
 
-In questa lezione esercitativa viene affrontata l'installazione di una macchina virtuale Linux e viene mostrato l'utilizzo dei comandi base della shell di Linux.
+In questa lezione esercitativa viene affrontata l'installazione di una macchina virtuale Linux e viene mostrato l'utilizzo dei comandi base della shell di Linux. 
+
+####### P.S.: Se si vuole subito utilizzare un terminale Linux e provare a sviluppare codice C e usare comandi della shell, andare su: [http://cs-education.github.io/sys/#VM](http://cs-education.github.io/sys/#VM). In ogni caso, è consigliato eseguire lo stesso l'installazione della VM.
 
 Sommario degli esempi:
 
