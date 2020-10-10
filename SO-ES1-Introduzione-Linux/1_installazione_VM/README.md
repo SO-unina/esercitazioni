@@ -4,7 +4,7 @@
 
 **Ultimo aggiornamento: 07/10/2020**
 
-La macchina virtuale ospita il sistema operativo **Ubuntu 20.04 LTS** (una distribuzione leggera di **Linux** ), e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.).
+La macchina virtuale ospita il sistema operativo **Ubuntu 20.04 LTS** (una distribuzione leggera di **Linux** ), e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.). L'user name e password dell'utente di default sono rispettivamente **so** e **so**.
 
 La macchina è contenuta in un file con estensione **.ova** da scaricare tramite il link OneDrive:
 
