@@ -12,7 +12,7 @@ La macchina è contenuta in un file con estensione **.ova** da scaricare tramite
 
 Tale file è stato creato per mezzo del programma **Oracle VirtualBox**, che deve essere installato sulla macchina su cui si intende far girare la macchina virtuale. L'applicativo VirtualBox è un gestore di macchine virtuali gratuito e facilmente installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/)](https://www.virtualbox.org/)).
 
-La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtuale) è la versione **6.2**.
+La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtuale) è la versione **6.1**.
 
 Una volta installato VirtualBox è possibile **importare** la macchina virtuale, scegliendo ' **File -> Importa applicazione virtuale**' come in figura:
 
