@@ -4,6 +4,8 @@
 
 **Ultimo aggiornamento: 07/10/2020**
 
+> **_N.B.:_** Per poter eseguire una macchina virtuale è necessario abilitare le estensioni di virtualizzazione della macchina fisica. Queste estensioni vanno abilitate dal BIOS all'avvio della macchina. Seguire una guida qualsiasi in base al modello del PC.
+
 La macchina virtuale ospita il sistema operativo **Ubuntu 20.04 LTS** (una distribuzione leggera di **Linux** ), e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.). L'username e password dell'utente di default sono rispettivamente **so** e **so**.
 
 La macchina è contenuta in un file con estensione **.ova** da scaricare tramite il link OneDrive:
