@@ -111,7 +111,7 @@ La macchina virtuale dovrà apparire correttamente nella libreria di VMware Work
 Anche per VMWare è possibile installare le guest additions, che sono chiamate **VMware Tools** (vedi Figura seguente).
 
 <p align="center">
-<img src="../images/image016.png" width="500" > 
+<img src="../images/image016.jpg" width="500" > 
 </p>
 
 
