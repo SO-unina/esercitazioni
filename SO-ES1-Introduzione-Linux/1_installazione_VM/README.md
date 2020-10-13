@@ -57,6 +57,12 @@ Dopo l'avvio, apparirà una nuova finestra in cui eseguirà il sistema operativo
 <img src="../images/image008.png" width="500" > 
 </p>
 
+E' possibile installare le cosiddette Guest Additions che permettono di avere tutta una serie di utilità per la macchina virtuale, ad esempio cartelle condivise tra la macchina host e la macchina virtuale, un miglior supporto al video etc. Per installarle, dal menù a tendina **Devices** selezionare **Insert Guest Additions CD Image ...** (vedi Figura)
+
+<p align="center">
+<img src="../images/image015.png" width="500" > 
+</p>
+
 
 In alternativa a VirtualBox, è possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
 
@@ -101,6 +107,12 @@ Come per VirtualBox, al termine dell'operazione, è possibile scegliere di perso
 
 
 La macchina virtuale dovrà apparire correttamente nella libreria di VMware Workstation Player.
+
+Anche per VMWare è possibile installare le guest additions, che sono chiamate **VMware Tools** (vedi Figura seguente).
+
+<p align="center">
+<img src="../images/image016.png" width="500" > 
+</p>
 
 
 > **_N.B.:_** Per effettuare operazioni di amministrazione (ad esempio, installazione di pacchetti, il comando sudo, etc.), si utilizzi la password ' **so**' (nome utente: ' **so**').
