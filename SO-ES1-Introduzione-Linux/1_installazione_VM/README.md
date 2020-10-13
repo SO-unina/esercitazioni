@@ -4,7 +4,9 @@
 
 **Ultimo aggiornamento: 07/10/2020**
 
-La macchina virtuale ospita il sistema operativo **Ubuntu 20.04 LTS** (una distribuzione leggera di **Linux** ), e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.).
+> **_N.B.:_** Per poter eseguire una macchina virtuale è necessario abilitare le estensioni di virtualizzazione della macchina fisica. Queste estensioni vanno abilitate dal BIOS all'avvio della macchina. Seguire una guida qualsiasi in base al modello del PC.
+
+La macchina virtuale ospita il sistema operativo **Ubuntu 20.04 LTS** (una distribuzione leggera di **Linux** ), e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.). L'username e password dell'utente di default sono rispettivamente **so** e **so**.
 
 La macchina è contenuta in un file con estensione **.ova** da scaricare tramite il link OneDrive:
 
@@ -12,7 +14,7 @@ La macchina è contenuta in un file con estensione **.ova** da scaricare tramite
 
 Tale file è stato creato per mezzo del programma **Oracle VirtualBox**, che deve essere installato sulla macchina su cui si intende far girare la macchina virtuale. L'applicativo VirtualBox è un gestore di macchine virtuali gratuito e facilmente installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/)](https://www.virtualbox.org/)).
 
-La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtuale) è la versione **6.2**.
+La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtuale) è la versione **6.1**.
 
 Una volta installato VirtualBox è possibile **importare** la macchina virtuale, scegliendo ' **File -> Importa applicazione virtuale**' come in figura:
 
@@ -53,6 +55,12 @@ Dopo l'avvio, apparirà una nuova finestra in cui eseguirà il sistema operativo
 
 <p align="center">
 <img src="../images/image008.png" width="500" > 
+</p>
+
+E' possibile installare le cosiddette Guest Additions che permettono di avere tutta una serie di utilità per la macchina virtuale, ad esempio cartelle condivise tra la macchina host e la macchina virtuale, un miglior supporto al video etc. Per installarle, dal menù a tendina **Devices** selezionare **Insert Guest Additions CD Image ...** (vedi Figura)
+
+<p align="center">
+<img src="../images/image015.png" width="500" > 
 </p>
 
 
@@ -99,6 +107,12 @@ Come per VirtualBox, al termine dell'operazione, è possibile scegliere di perso
 
 
 La macchina virtuale dovrà apparire correttamente nella libreria di VMware Workstation Player.
+
+Anche per VMWare è possibile installare le guest additions, che sono chiamate **VMware Tools** (vedi Figura seguente).
+
+<p align="center">
+<img src="../images/image016.png" width="500" > 
+</p>
 
 
 > **_N.B.:_** Per effettuare operazioni di amministrazione (ad esempio, installazione di pacchetti, il comando sudo, etc.), si utilizzi la password ' **so**' (nome utente: ' **so**').
