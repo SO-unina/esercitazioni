@@ -1,6 +1,6 @@
 # System call per la gestione dei processi
 
-## Identificativo di un processo: ``getpid()``
+## Identificativo di un processo: ``getpid()`` e ``getppid()``
 
 Ogni processo ha un unico identificatore di processo chiamato PID (Process Identifier). Il PID è un intero compreso tra 0 e ``pid_max``. Di default il ``pid_max`` è pari a ``32768``; è possibile leggere tale valore dal file di sistema ``/proc/sys/kernel/pid_max``. E.g.:
 
@@ -38,3 +38,10 @@ Sono il processo pid = 19375
 Il mio processo genitore ha pid = 14511
 ```
 
+In Linux, sono stabiliti alcuni PID di default per specifici processi. Ad esempio:
+
+- Processo ``scheduler``: PID = 0
+- Processo ``init``: PID = 1
+- Processo ``pagedaemon``: PID = 2
+
+Per poter analizzare i PID associati ai processi attualmente sul sistema, possiamo utilizzare ancora il comando ``ps`` (vedi [lezione sui comandi shell](../SO-ES1-Introduzione-Linux/2_comandi_shell))
