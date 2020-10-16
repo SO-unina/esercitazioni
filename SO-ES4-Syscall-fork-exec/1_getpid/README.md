@@ -13,7 +13,7 @@ Il PID di un processo viene assegnato dal kernel all’atto della sua creazione.
 
 Il seguente codice stamperà a video il PID del processo corrente e il PID del suo processo padre:
 
-```
+```c
 #include <stdio.h>
 #include <unistd.h>
 
@@ -21,18 +21,18 @@ int main(void)
 {
  	int pid, ppid;
  	pid = getpid();
- 	printf(”Sono il processo pid = %d\n”, pid);
+ 	printf("Sono il processo pid = %d\n", pid);
  
 	ppid = getppid();
- 	printf(“Il mio processo genitore ha pid = %d\n”, ppid);
+ 	printf("Il mio processo genitore ha pid = %d\n", ppid);
 
  	return 0;
 }
 ```
 
-Provando a compilare ed eseguire tale codice otteniamo un output del genere:
+Provando a compilare ed eseguire tale codice (osservare i file ``Makefile`` e ``main.c``) otteniamo un output del genere:
 
-```
+```console
 $ ./getpid_ex
 Sono il processo pid = 19375
 Il mio processo genitore ha pid = 14511
