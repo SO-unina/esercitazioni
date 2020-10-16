@@ -43,9 +43,7 @@ $ ldd calc
 
 - Lanciare l'eseguibile generato ``calc``
 
-Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è possibile utilizzare i flag ``-rdynamic`` e ``-ldl``.
-Il flag ``-ldl`` impone al linker di trovare e collegare la libreria dinamica ``libdl.so``, riuscendo ad attivare il caricamento dinamico delle librerie dinamiche.
-Il flag ``rdynamic`` istruisce il linker ad aggiungere tutti i simboli, non solo quelli utilizzati dalla libreria, alla tabella dei simboli dinamici.
+Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è possibile utilizzare il flag ``-Wl,-rpath,$(DEFAULT_LIB_INSTALL_PATH)`` indicando al posto di ``DEFAULT_LIB_INSTALL_PATH`` il path della libreria dinamica. A questo punto:
 
 - Provare a pulire gli artefatti di compilazione precedenti (``make -f MakefileShLib clean``)
 - Compilare utilizzando il makefile ``MakefileShLibDyn`` (``make -f MakefileShLibDyn``)
