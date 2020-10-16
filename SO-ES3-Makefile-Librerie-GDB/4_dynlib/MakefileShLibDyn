@@ -3,7 +3,7 @@ CURR=$(PWD)/
 all: calc
 
 calc: mat.so main.o
-	gcc -rdynamic -o calc main.o -L$(CURR) -lmat -ldl
+	gcc -o calc main.o -L$(CURR) -lmat -Wl,-rpath,$(CURR)
 
 main.o: 
 	gcc -c main.c
