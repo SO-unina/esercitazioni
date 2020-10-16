@@ -1,5 +1,3 @@
-# System call per la gestione dei processi
-
 ## Identificativo di un processo: ``getpid()`` e ``getppid()``
 
 Ogni processo ha un unico identificatore di processo chiamato PID (Process Identifier). Il PID è un intero compreso tra 0 e ``pid_max``. Di default il ``pid_max`` è pari a ``32768``; è possibile leggere tale valore dal file di sistema ``/proc/sys/kernel/pid_max``. E.g.:
