@@ -9,7 +9,9 @@ $ cat /proc/sys/kernel/pid_max
 32768
 ```
 
-Il PID di un processo viene assegnato dal kernel all’atto della sua creazione. E' possibile ottenere il PID di un processo attraverso la chiamata di sistema ``getpid()``. E.g.:
+Il PID di un processo viene assegnato dal kernel all’atto della sua creazione. E' possibile ottenere il PID di un processo attraverso la chiamata di sistema ``getpid()``. Inoltre, i processi in Unix sono organizzati gerarchicamente, ovvero, ogni processo ha un processo padre (eccetto il processo ``init``). Nel contesto di esecuzione del processo corrente, è possibile ottenre il PID del processo padre attraverso la chiamata di sistema ``getppid()``.
+
+Il seguente codice stamperà a video il PID del processo corrente e il PID del suo processo padre:
 
 ```
 #include <stdio.h>
@@ -28,7 +30,11 @@ int main(void)
 }
 ```
 
-Provando a compilare ed eseguire tale codice otteniamo:
+Provando a compilare ed eseguire tale codice otteniamo un output del genere:
 
-
+```
+$ ./getpid_ex
+Sono il processo pid = 19375
+Il mio processo genitore ha pid = 14511
+```
 
