@@ -43,7 +43,7 @@ $ ldd calc
 
 - Lanciare l'eseguibile generato ``calc``
 
-Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è possibile utilizzare il flag ``-Wl,-rpath,$(DEFAULT_LIB_INSTALL_PATH)`` indicando al posto di ``DEFAULT_LIB_INSTALL_PATH`` il path della libreria dinamica. A questo punto:
+Per evitare di dover modificare la variabile d'ambiente ``LD_LIBRARY_PATH``, è possibile utilizzare il flag ``-Wl,-rpath,$(DEFAULT_LIB_INSTALL_PATH)`` indicando al posto di ``DEFAULT_LIB_INSTALL_PATH`` il path della libreria dinamica. A questo punto, osservare come è fatto il file ``MakefileShLibDyn`` e:
 
 - Provare a pulire gli artefatti di compilazione precedenti (``make -f MakefileShLib clean``)
 - Compilare utilizzando il makefile ``MakefileShLibDyn`` (``make -f MakefileShLibDyn``)
