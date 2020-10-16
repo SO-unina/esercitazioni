@@ -30,7 +30,7 @@ int main(void)
 }
 ```
 
-Provando a compilare ed eseguire tale codice (osservare i file ``Makefile`` e ``main.c``) otteniamo un output del genere:
+Provando a compilare ed eseguire tale codice (osservare i file [``Makefile``](Makefiel) e [``main.c``](main.c)) otteniamo un output del genere:
 
 ```console
 $ ./getpid_ex
