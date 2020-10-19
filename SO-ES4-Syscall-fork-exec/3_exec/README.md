@@ -86,9 +86,9 @@ total 40
 Il figlio 77657 ha terminato l'esecuzione con stato: 0
 ```
 
-### Parametri del ``main()`` passati tramite command line 
+### I parametri ``argc`` e ``argv`` del ``main()``
 
-Nell'utilizzo di ``exec()``, è possibile sfruttare i cosiddetti parametri della *command line* da passare al ``main()``. In particolare, è possibile utilizzare la seguente firma per la funzione ``main()``:
+Nell'utilizzo di ``exec()``, è possibile sfruttare i cosiddetti parametri passati dalla cosiddetta *command line* al ``main()``. In particolare, è possibile utilizzare la seguente firma per la funzione ``main()``:
 
 ```c
 int main(int argc, char *argv[]){
