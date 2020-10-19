@@ -8,7 +8,16 @@ Supponendo di chiamare la libreria statica mat, per poter compilare tale libreri
 gcc -shared -Wl,-soname,libmat.so -o libmat.so mat.o
 ```
 
+Dove:
+- ``-shared``: indica al compilatore che si vuole creare uno shared object
+- ``-Wl``: passa opzioni al linker, in questo caso il nome della libreria
+- ``-o``: nome da dare al file contenente la shared library
+
+Per il nome della libreria vale una convenzione simile a quella vista per le librerie statiche: prefisso _lib_, e suffisso _.so_.
+I file _obj1.o_, ..., _objN.o_ che compongono la libreria vanno compilati con l’opzione ``–fpic`` per generare codice rilocabile, ovvero indipendente dalla posizione (PIC – position independent code).
+
 Notare come nel Makefile viene utilizzata la variabile d'ambiente ``${PWD}`` per poter accedere al percorso corrente (dove si sta eseguendo il comando ``make``).
+
 
 Effettuare i seguenti passi:
 
