@@ -44,11 +44,11 @@ if (pid == 0) {
 // Generalmente, effettua una wait() sul figlio.
 ```
 
-Analizzare il programma [main.c](main.c) che fa uso della funzione ``execl()`` per poter eseguire il comando ``ls -l``.
+Analizzare il programma [main_ls.c](main_ls.c) che fa uso della funzione ``execl()`` per poter eseguire il comando ``ls -l``.
 Provando ad eseguire il programma main.c, otterremmo una cosa del genere:
 
 ```console
-$ ./main
+$ ./main_ls
 ESECUZIONE del comando 'ls -l'...
 total 40
 -rw-r--r--@ 1 so  so  1930 Oct 19 13:05 README.md
