@@ -18,7 +18,7 @@ In particolare, i flag specificano che:
 - ``c``: crea la libreria, se non esiste
 - ``s``: crea un indice oggetto-file
 
-Infine, per collegare i vari file oggetto con la libreria statica generata, bisogna utilizzare gcc e i  flag ``-L``, per indicare il path dove ricercare la libreria, e il flag ``-l`` per specificare il nome (epurato dal prefisso ``lib`` e dall'estensione ``.a``) della libreria da collegare. Ad esempio:
+Infine, per collegare i vari file oggetto con la libreria statica generata, bisogna utilizzare il compilatore ``gcc`` e i flag ``-L``, per indicare il path dove ricercare la libreria, e il flag ``-l`` per specificare il nome (epurato dal prefisso ``lib`` e dall'estensione ``.a``) della libreria da collegare. Ad esempio:
 
 ```
 gcc -o calc main.c -L$(CURR) -lmat
