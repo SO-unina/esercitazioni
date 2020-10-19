@@ -40,8 +40,8 @@ if (pid == 0) {
 } else if (pid < 0){
 	perror(“fork fallita”);
 }
-// Il padre continua da questo 
-// punto in poi...
+// Il padre continua da questo punto in poi.
+// Generalmente, effettua una wait() sul figlio.
 ```
 
 Analizzare il programma [main.c](main.c) che fa uso della funzione ``execl()`` per poter eseguire il comando ``ls -l``.
@@ -64,4 +64,3 @@ Le possibili implementazioni della ``exec()`` sono due:
 
 - Sovra-scrittura del segmento di memoria corrente con nuovi valori;
 - Allocazione di nuovi segmenti di memoria, inizializzazione di questi con i valori del nuovo processo e deallocazione dei segmenti *vecchi*.
-
