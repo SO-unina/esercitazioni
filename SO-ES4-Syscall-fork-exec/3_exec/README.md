@@ -45,7 +45,6 @@ if (pid == 0) {
 ```
 
 Analizzare il programma [main.c](main.c) che fa uso della funzione ``execl()`` per poter eseguire il comando ``ls -l``.
-
 Provando ad eseguire il programma main.c, otterremmo una cosa del genere:
 
 ```console
