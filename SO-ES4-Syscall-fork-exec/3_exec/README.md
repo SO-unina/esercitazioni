@@ -155,6 +155,16 @@ Copia effettuata con successo!
 Il processo padre termina
 ```
 
+### Esercizio. Implementare una Unix shell
+
+L’interprete dei comandi (*shell*) implementa le seguenti funzionalità:
+
+- Legge la linea di comando;
+- Estrae la prima parola, assumendo che sia il nome di un programma;
+- Cerca il programma in questione e lo lancia in esecuzione (mediante fork ed exec), passandogli come argomenti le altre parole presenti sulla linea di comando;
+- Attende che il figlio termini, prima di presentare nuovamente il prompt d’utente.
+
+Utilizzare le system call viste fin'ora per implementare tale Unix shell.
 
 
 
