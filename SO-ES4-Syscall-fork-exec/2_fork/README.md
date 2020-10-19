@@ -11,7 +11,12 @@ La ``fork()`` crea una copia **esatta** (duplicazione) del processo chiamante. I
 - Il figlio eredita gli stessi valori delle variabili, i descrittori agli stessi file aperti, e anche il Program Counter (PC);
 - Le modifiche apportate alle proprie variabili da uno dei due processi _non_ sono visibili all’altro.
 
-Padre e figlio condivideranno l’area testo.
+Padre e figlio condivideranno l’area testo (vedere figura).
+
+<p align="center">
+<img src="../images/fork_parent_child.png" width="300" > 
+</p>
+
 
 Siccome viene copiato anche il PC, processo padre e processo figlio riprenderanno l’esecuzione dal punto in cui è stata eseguita la ``fork()``. 
 
