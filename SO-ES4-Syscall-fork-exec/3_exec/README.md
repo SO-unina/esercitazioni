@@ -9,6 +9,11 @@ Il processo dopo la chiamata ad ``exec()``:
 - Riferisce una nuova *text structure*;
 - Mantiene *user area* (a parte PC e informazioni legate al codice) e stack del kernel.
 
+<p align="center">
+<img src="../images/fork_exec_wait_exit.png" width="200" > 
+</p>
+
+
 L'``exec()`` è anche nota come "sostituzione di codice". Questo significa che dopo la chiamata, è lo stesso processo che esegue, ma esegue un programma differente.
 
 Le possibili implementazioni della ``exec()`` sono due:
