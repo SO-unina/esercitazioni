@@ -56,3 +56,12 @@ total 40
 -rw-r--r--  1 so  so   592 Oct 19 13:07 main.c
 Il figlio 77657 ha terminato l'esecuzione con stato: 0
 ```
+
+
+L'``exec()`` è anche nota come "sostituzione di codice". Questo significa che dopo la chiamata, è lo stesso processo che esegue, ma esegue un programma differente.
+
+Le possibili implementazioni della ``exec()`` sono due:
+
+- Sovra-scrittura del segmento di memoria corrente con nuovi valori;
+- Allocazione di nuovi segmenti di memoria, inizializzazione di questi con i valori del nuovo processo e deallocazione dei segmenti *vecchi*.
+
