@@ -14,7 +14,7 @@ La ``fork()`` crea una copia **esatta** (duplicazione) del processo chiamante. I
 Padre e figlio condivideranno l’area testo (vedere figura).
 
 <p align="center">
-<img src="../images/fork_parent_child.png" width="300" > 
+<img src="../images/fork_parent_child.png" width="500" > 
 </p>
 
 
