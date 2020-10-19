@@ -86,37 +86,44 @@ total 40
 Il figlio 77657 ha terminato l'esecuzione con stato: 0
 ```
 
-### Parametri della command line al ``main()``
+### Parametri del ``main()`` passati tramite command line 
 
-Nell'utilizzo di ``exec()`` è possibile sfruttare i cosiddetti parametri della *command line* da passare al ``main()``. In particolare, è possibile utilizzare la seguente firma per il ``main()``:
+Nell'utilizzo di ``exec()``, è possibile sfruttare i cosiddetti parametri della *command line* da passare al ``main()``. In particolare, è possibile utilizzare la seguente firma per la funzione ``main()``:
 
 ```c
-int main(int argc, char *argv[])
+int main(int argc, char *argv[]){
+
+	...
+	return 0;
+}
 ```
 
-dove ``argc`` indica il numero di stringhe puntato dal parametro ``*argv[]`` che invece sta ad indicare il puntatore all'array di stringhe, dove argv[0] è la prima stringa, argv[1] la seconda, e così via.
+dove ``argc`` indica il numero di stringhe puntate dal parametro ``*argv[]`` che invece sta ad indicare il puntatore all'array di stringhe in ingresso: ``argv[0]`` indica la prima stringa, ``argv[1]`` la seconda, e così via.
 
-Analizziamo il codice in [main_cp.c](main_cp.c). Questo programma invoca il comando ``cp`` su due parametri che sono passati tramite linea di comando al ``main()``:
+Analizziamo il codice in [main_cp.c](main_cp.c). Questo programma invoca il comando ``/bin/cp`` su due parametri che sono passati tramite linea di comando al ``main()``:
 
 ```c
 execl("/bin/cp", "cp", argv[1], argv[2], 0);
 ```
 
-Notare come l'indice dei parametri di ingresso parta da ``1`` e non da ``0``; questo perchè la stringa ``argv[0]`` identifica il comando stesso.
+Notare come l'indice dei parametri di ingresso parta da ``1`` e non da ``0``; questo perchè la stringa ``argv[0]`` identifica il nome dell'eseguibile che state avviando (provate a stampare la variabile ``argv[0]``).
 Compilando il programma, e provandolo ad eseguire, otterremo come di seguito:
 
 ```console
 $ gcc -o main_cp main_cp.c
 $ ./main_cp main_cp.c main_cp.c.backup
-Sono il processo padre, con PID 86261
-Sono il processo figlio, con PID 86262
+Sono il processo padre, con PID 87487
+Sono il processo figlio, con PID 87488
+Command line passata al main():
+argv[0]: ./main_cp
+argv[1]: main_cp.c
+argv[2]: main_cp.c.backup
 Attendo 3 secondi
 .
 .
 .
 Copia effettuata con successo!
-Il processo padre termina
-```
+Il processo padre termina```
 
 
 

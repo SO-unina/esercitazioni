@@ -20,6 +20,10 @@ int main(int argc, char * argv[]) {
         if( pid == 0 ) {
 
                 printf("Sono il processo figlio, con PID %d\n", getpid());
+                printf("Command line passata al main():\n");
+                printf("argv[0]: %s\n", argv[0]);
+                printf("argv[1]: %s\n", argv[1]);
+                printf("argv[2]: %s\n", argv[2]);
                 printf("Attendo 3 secondi\n");
 
                 for(i=0; i<3; i++) {
