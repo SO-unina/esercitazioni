@@ -62,7 +62,7 @@ for (i=0; i<N; i++){
 }
 ```
 
-Assumendo ``N=3``, tale codice non creerà 3 processi figli, ma ogni volta che si richiamerà la ``fork()`` il processo figlio appena creato avrà il proprio flusso di controllo, e dipendentemente dal valore di ``i`` potrà creare altri processi figli a sua volta!
+Assumendo ``N=3``, tale codice non creerà 3 processi figli, ma ogni volta che si richiamerà la ``fork()`` il processo figlio appena creato avrà il proprio flusso di controllo, e dipendentemente dal valore di ``i`` potrà creare altri processi figli a sua volta (questo è alla base del famoso attacco informatico [fork bomb](https://en.wikipedia.org/wiki/Fork_bomb))!
 
 La soluzione corretta è:
 
