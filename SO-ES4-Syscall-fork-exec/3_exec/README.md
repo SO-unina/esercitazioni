@@ -92,7 +92,6 @@ Nell'utilizzo di ``exec()``, è possibile sfruttare i cosiddetti parametri passa
 
 ```c
 int main(int argc, char *argv[]){
-
 	...
 	return 0;
 }
