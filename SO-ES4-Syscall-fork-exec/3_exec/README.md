@@ -164,7 +164,7 @@ L’interprete dei comandi (*shell*) implementa le seguenti funzionalità:
 - Cerca il programma in questione e lo lancia in esecuzione (mediante fork ed exec), passandogli come argomenti le altre parole presenti sulla linea di comando;
 - Attende che il figlio termini, prima di presentare nuovamente il prompt d’utente.
 
-Utilizzare le system call viste fin'ora per implementare tale Unix shell.
+Utilizzare le system call viste fin'ora per implementare una Unix shell di base.
 
 
 
