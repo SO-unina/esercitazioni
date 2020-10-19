@@ -28,8 +28,7 @@ In Linux BSD viene implementata la ``vfork()``, una system call che crea un proc
 In Linux viene adottato un meccanismo diverso chiamato **copy-on-write**. Inizialmente il processo figlio condivide la memoria del processo padre, configurata come *read-only*. Al primo tentativo di modifica da parte del processo figlio, il kernel provvederà ad effettuare la copia.
 
 <p align="center">
-<img src="../images/copy-on-write
-.png" width="500" > 
+<img src="../images/copy-on-write.png" width="500" > 
 </p>
 
 
