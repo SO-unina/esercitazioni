@@ -14,7 +14,7 @@ int main() {
 	}	
 	if  (pid==0){
                 printf("ESECUZIONE del comando 'ls -l'...\n");
-		execl("/bin/ls","ls","-l",NULL);
+		execl("/bin/ls", "ls", "-l", NULL);
 		fprintf(stderr,"Exec fallita!!\n");
 		_exit(1);
 	}

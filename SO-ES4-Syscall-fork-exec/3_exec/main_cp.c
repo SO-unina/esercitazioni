@@ -27,7 +27,7 @@ int main(int argc, char * argv[]) {
                         printf(".\n");
                  }
 
-                execl("/usr/bin/cp", "cp", argv[1], argv[2], 0);
+                execl("/bin/cp", "cp", argv[1], argv[2], 0);
 
                 perror("Se arrivo in questo punto, qualcosa è andato storto...\n");
 
@@ -38,13 +38,9 @@ int main(int argc, char * argv[]) {
 
                 printf("Sono il processo padre, con PID %d\n", getpid());
 
-                        
-                for(i=0; i<6; i++) {
+                wait(NULL);
 
-                        sleep(1);
-                        printf("*\n");
-                }
-
+                printf("Copia effettuata con successo!\n");
                 printf("Il processo padre termina\n");
 
                 exit(0);

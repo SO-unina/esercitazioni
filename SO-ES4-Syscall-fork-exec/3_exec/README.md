@@ -9,6 +9,13 @@ Il processo dopo la chiamata ad ``exec()``:
 - Riferisce una nuova *text structure*;
 - Mantiene *user area* (a parte PC e informazioni legate al codice) e stack del kernel.
 
+L'``exec()`` è anche nota come "sostituzione di codice". Questo significa che dopo la chiamata, è lo stesso processo che esegue, ma esegue un programma differente.
+
+Le possibili implementazioni della ``exec()`` sono due:
+
+- Sovra-scrittura del segmento di memoria corrente con nuovi valori;
+- Allocazione di nuovi segmenti di memoria, inizializzazione di questi con i valori del nuovo processo e deallocazione dei segmenti *vecchi*.
+
 Esistono varie versioni della ``exec()``:
 
 ```c
@@ -17,7 +24,13 @@ int execl(char *path, char *arg0, .., char *argn, (char *) 0);
 
 //Nome dell’eseguibile (da cercare nelle cartelle di sistema); parametri tramite lista
 int execlp(char *nomefile, char *arg0, .., char *argn, (char *) 0);
+```
 
+Sia in ``execl()`` e ``execlp()`` notare come si usi il carattere nullo (``(char *) 0``, oppure è possibile usare ``NULL``) per indicare la fine dei parametri da passare al comando.
+
+Altre versioni della ``exec()`` sono:
+
+```c
 //Percorso completo dell’eseguibile; parametri tramite array
 int execv(const char *path, char *const argv[]);
 
@@ -44,7 +57,22 @@ if (pid == 0) {
 // Generalmente, effettua una wait() sul figlio.
 ```
 
-Analizzare il programma [main_ls.c](main_ls.c) che fa uso della funzione ``execl()`` per poter eseguire il comando ``ls -l``.
+### Esecuzione del comando ``ls -l`` tramite ``exec()``
+
+Analizzare il programma [main_ls.c](main_ls.c) che fa uso della funzione ``execl()`` per poter eseguire il comando ``ls -l``. Notare come nella chiamata a ``execl()`` abbiamo: 
+
+```c
+execl("/bin/ls", "ls", "-l", NULL);
+```
+Ovvero:
+
+- Il primo parametro è il path del comando ``ls`` (includendo il suo nome);
+- Il secondo parametro è il nome del comando (``ls``);
+- Il terzo parametro è il flag ``-l``;
+- L'ultimo parametro sia ``NULL``.
+
+
+
 Provando ad eseguire il programma main.c, otterremmo una cosa del genere:
 
 ```console
@@ -57,10 +85,7 @@ total 40
 Il figlio 77657 ha terminato l'esecuzione con stato: 0
 ```
 
+### Esecuzione del comando ``cp`` tramite ``exec()``
 
-L'``exec()`` è anche nota come "sostituzione di codice". Questo significa che dopo la chiamata, è lo stesso processo che esegue, ma esegue un programma differente.
 
-Le possibili implementazioni della ``exec()`` sono due:
 
-- Sovra-scrittura del segmento di memoria corrente con nuovi valori;
-- Allocazione di nuovi segmenti di memoria, inizializzazione di questi con i valori del nuovo processo e deallocazione dei segmenti *vecchi*.
