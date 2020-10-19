@@ -124,9 +124,9 @@ In particolare, lo stato di terminazione di un processo è un intero a 16 bit. N
 - ``0``: volontariamente;
 - <span>&#8800;</span> ``0``: involontariamente (il valore esprime il segnale ricevuto).
 
-Nel caso in cui il figlio termini volontariamente, il byte più significativo contiene lo stato di terminazione (il valore del parametro attuale passato alla ``exit()``, ``0`` nell’esempio in figura).  
+Nel caso in cui il figlio termini volontariamente, il byte più significativo contiene lo stato di terminazione (il valore del parametro attuale passato alla ``exit()``, ovvero ``0``).  
 
 <p align="center">
 <img src="../images/wait_and_exit.png" width="300" > 
+<img src="../images/fork_wait_exit.pdf" width="200" > 
 </p>
-
