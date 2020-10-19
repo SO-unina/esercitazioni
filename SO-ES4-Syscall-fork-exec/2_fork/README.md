@@ -77,7 +77,7 @@ for (i=0; i<N; i++){
 }
 ```
 
-Analizzare il codice [main.c](main.c), provando ad eseguire il codice commentando e decommentando la riga 13.
+Analizzare il codice [main.c](main.c), provando ad eseguire il codice commentando e decommentando la [riga 13](main.c#L13).
 
 
 
