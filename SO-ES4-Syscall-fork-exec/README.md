@@ -5,5 +5,5 @@ In questa lezione esercitativa sono affrontate le system call utilizzate per la 
 Sommario degli esempi:
 
 - [**1_getpid**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES4-Syscall-fork-exec/1_getpid): Utilizzo della system call ``getpid()``;
-- [**2_fork**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES4-Syscall-fork-exec/1_fork): Utilizzo delle system call ``fork()``, ``wait()``, e ``exit()``;
+- [**2_fork**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES4-Syscall-fork-exec/2_fork): Utilizzo delle system call ``fork()``, ``wait()``, e ``exit()``;
 
