@@ -122,7 +122,8 @@ Attendo 3 secondi
 .
 .
 Copia effettuata con successo!
-Il processo padre termina```
+Il processo padre termina
+```
 
 
 
