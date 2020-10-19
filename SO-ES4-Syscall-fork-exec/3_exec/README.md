@@ -40,8 +40,7 @@ if (pid == 0) {
 } else if (pid < 0){
 	perror(“fork fallita”);
 }
-// Il padre continua da questo 
-// punto in poi...
+// Il padre continua da questo punto in poi. Generalmente, effettua una wait() sul figlio.
 ```
 
 Analizzare il programma [main.c](main.c) che fa uso della funzione ``execl()`` per poter eseguire il comando ``ls -l``.
