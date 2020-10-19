@@ -128,5 +128,5 @@ Nel caso in cui il figlio termini volontariamente, il byte più significativo co
 
 <p align="center">
 <img src="../images/wait_and_exit.png" width="300" > 
-<img src="../images/fork_wait_exit.pdf" width="200" > 
+<img src="../images/fork_wait_exit.png" width="200" > 
 </p>
