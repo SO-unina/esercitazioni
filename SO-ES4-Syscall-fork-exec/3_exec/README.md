@@ -14,12 +14,26 @@ Il processo dopo la chiamata ad ``exec()``:
 </p>
 
 
-L'``exec()`` è anche nota come "sostituzione di codice". Questo significa che dopo la chiamata, è lo stesso processo che esegue, ma esegue un programma differente.
+L'``exec()`` è anche nota come "sostituzione di codice". Questo significa che dopo la chiamata, il processo che esegue è lo stesso, ma esso esegue un programma differente.
 
 Le possibili implementazioni della ``exec()`` sono due:
 
 - Sovra-scrittura del segmento di memoria corrente con nuovi valori;
 - Allocazione di nuovi segmenti di memoria, inizializzazione di questi con i valori del nuovo processo e deallocazione dei segmenti *vecchi*.
+
+Nel 99% dei casi, dopo una ``fork()`` viene eseguita una ``exec()``. L’operazione di copia della memoria tra processo padre e processo figlio è nella maggior parte dei casi sprecata, perchè non tutta l'area di memoria del padre potrebbe essere modificata.
+
+In Linux BSD viene implementata la ``vfork()``, una system call che crea un processo senza copiare l’immagine dal padre al figlio. Spesso tale chiamata di sistema è detta lightweight ``fork()``, ed obbliga il proceso figlio ad invocare subito la ``exec()``.
+
+In Linux viene adottato un meccanismo diverso chiamato **copy-on-write**. Inizialmente il processo figlio condivide la memoria del processo padre, configurata come *read-only*. Al primo tentativo di modifica da parte del processo figlio, il kernel provvederà ad effettuare la copia.
+
+<p align="center">
+<img src="../images/copy-on-write
+.png" width="500" > 
+</p>
+
+
+### Famiglia delle ``exec()``
 
 Esistono varie versioni della ``exec()``:
 
