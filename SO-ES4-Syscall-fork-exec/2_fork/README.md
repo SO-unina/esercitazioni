@@ -48,6 +48,41 @@ if (pid > 0) {
 }
 ```
 
+### Creazione di *N* processi
+
+Per creare *N* processi è necessario richiamare la system call ``fork()`` *N* volte, imponendo che il solo processo padre possa creare ulteriori processi figli!
+
+La soluzione classica **sbagliata** è la seguente:
+
+```c
+int i, pid, N=3;
+for (i=0; i<N; i++){
+	pid = fork();
+	printf("Sono il FIGLIO con PID: %d\n", getpid());
+}
+```
+
+Assumendo ``N=3``, tale codice non creerà 3 processi figli, ma ogni volta che si richiamerà la ``fork()`` il processo figlio appena creato avrà il proprio flusso di controllo, e dipendentemente dal valore di ``i`` potrà creare altri processi figli a sua volta!
+
+La soluzione corretta è:
+
+```c
+int i, pid, N=3;
+for (i=0; i<N; i++){
+	pid = fork();
+	if (pid == 0){
+		printf("Sono il FIGLIO con PID: %d\n", getpid());
+		i=3;
+	}
+}
+```
+
+Analizzare il codice [main.c](main.c), provando ad eseguire il codice commentando e decommentando la riga 13.
+
+
+
+
+
 ## Attesa e terminazione di un processo
 
 ### ``wait()``
@@ -89,6 +124,4 @@ Nel caso in cui il figlio termini volontariamente, il byte più significativo co
 <p align="center">
 <img src="../images/wait_and_exit.png" width="300" > 
 </p>
-
-Analizzare il codice main.c per osservare come vengono utilizzare le system call ``fork()``, ``wait``, e ``exit``.
 
