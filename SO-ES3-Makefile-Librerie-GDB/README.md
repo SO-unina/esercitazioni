@@ -8,3 +8,4 @@ Sommario degli esempi:
 - [**2_elfdumping**](https://github.com/SO-unina/esercitazioni/edit/main/SO-ES3-Makefile-Librerie-GDB/2_elfdumping): Ottenere il dump di un file oggetto;
 - [**3_statlib**](https://github.com/SO-unina/esercitazioni/edit/main/SO-ES3-Makefile-Librerie-GDB/3_statlib): Sviluppo libreria statica;
 - [**4_dynlib**](https://github.com/SO-unina/esercitazioni/edit/main/SO-ES3-Makefile-Librerie-GDB/4_dynlib): Sviluppo libreria dinamica;
+- [**5_gdb**](https://github.com/SO-unina/esercitazioni/edit/main/SO-ES3-Makefile-Librerie-GDB/5_gdb): Utilizzo del debugger;
