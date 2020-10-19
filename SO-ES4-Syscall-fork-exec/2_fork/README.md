@@ -11,19 +11,19 @@ La ``fork()`` crea una copia **esatta** (duplicazione) del processo chiamante. I
 - Il figlio eredita gli stessi valori delle variabili, i descrittori agli stessi file aperti, e anche il Program Counter (PC);
 - Le modifiche apportate alle proprie variabili da uno dei due processi _non_ sono visibili all’altro.
 
-Padre e figlio condivideranno l’area testo (vedere figura).
+Padre e figlio condivideranno l’area testo.
+
+Siccome viene copiato anche il PC, processo padre e processo figlio riprenderanno l’esecuzione dal punto in cui è stata eseguita la ``fork()``. 
+
+La ``fork()`` restituisce un valore intero che viene utilizzato per discriminare se si è nel contesto di esecuzione del processo padre o del processo figlio. In particolare (vedere figura):
+
+- Se la ``fork()`` ha successo, il PID del processo *figlio* viene restituito nel contesto di esecuzione del processo *padre*, mentre viene restiuto ``0`` nel contesto di esecuzione del processo *figlio*;
+- Se la ``fork()`` fallisce, ad esempio, perchè non c'è abbastanza memoria RAM da allocare per il processo da creare, viene restituito il valore ``-1``.
 
 <p align="center">
 <img src="../images/fork_parent_child.png" width="500" > 
 </p>
 
-
-Siccome viene copiato anche il PC, processo padre e processo figlio riprenderanno l’esecuzione dal punto in cui è stata eseguita la ``fork()``. 
-
-La ``fork()`` restituisce un valore intero che viene utilizzato per discriminare se si è nel contesto di esecuzione del processo padre o del processo figlio. In particolare:
-
-- Se la ``fork()`` ha successo, il PID del processo *figlio* viene restituito nel contesto di esecuzione del processo *padre*, mentre viene restiuto ``0`` nel contesto di esecuzione del processo *figlio*;
-- Se la ``fork()`` fallisce, ad esempio, perchè non c'è abbastanza memoria RAM da allocare per il processo da creare, viene restituito il valore ``-1``.
 
 E' possibile approfondire il funzionamento della ``fork()`` analizzando il manuale (``man fork``).
 
