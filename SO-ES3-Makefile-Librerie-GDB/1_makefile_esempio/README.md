@@ -39,7 +39,7 @@ clean:
 	rm -f *~
 ```
 
-Possiamo notare che la prima regola (``all``) dipende dal file ``start``, la quale dipende a sua volta dai file ``lib.o`` e ``main.o``, e così via fino ad arrivare ad una regola risolvibie.
+Possiamo notare che la prima regola (``all``) dipende dal file ``start``, la quale dipende a sua volta dai file ``lib.o`` e ``main.o``, e così via fino ad arrivare ad una regola risolvibile.
 
 Per questioni di utilità, spesso viene sempre aggiunta una regola di **clean** all'interno di un Makefile. Questa regola (senza dipendenze) permette di effettuare una pulizia dei file oggetto e dei file eseguibili generati durante la compilazione. E.g.:
 
