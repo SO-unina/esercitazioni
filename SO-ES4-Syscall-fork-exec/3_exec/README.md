@@ -31,6 +31,18 @@ In Linux viene adottato un meccanismo diverso chiamato **copy-on-write**. Inizia
 <img src="../images/copy-on-write.png" width="500" > 
 </p>
 
+Disaccoppiare la ``fork()`` dalla ``exec()`` dà la possibilità al programmatore di gestire il processo figlio solo a valle della sua creazione, in maniera completamente indipendente dal processo padre. E.g.:
+
+```c
+int pid = fork();	// crea il figlio
+if(pid == 0) {		// il figlio continua qui
+
+	// Op. qualsiasi (libera memoria, chiudi connessioni, etc.)
+	
+	execl(“program”, arg0, arg1, arg2, …);
+}
+```
+
 
 ### Famiglia delle ``exec()``
 
