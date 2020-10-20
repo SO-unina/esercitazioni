@@ -25,7 +25,7 @@ Il file eseguibile per cui si vuole effettuare il debug con ``gdb`` deve essere 
 - ``kill``: uccide il processo per cui stiamo facendone il debug
 - ``quit``: esce da ``gdb``
 
-### Esecuzione step by step
+### Esecuzione step by step
 
 - ``c(ontinue)``: continua l’esecuzione fino al prossimo stop
 - ``s(tep)``: esegue una linea di codice, entrando nella chiamata a funzione se la linea è una call.
@@ -40,7 +40,7 @@ Il file eseguibile per cui si vuole effettuare il debug con ``gdb`` deve essere 
 - ``clear <pos>``: elimina un breakpoint alla posizione pos
 - ``delete <num>``: elimina un breakpoint usando il numero
  
-### Comandi per ricercare e stampare
+### Comandi per ricercare e stampare
 
 - ``list <pos>``: stampa la linea di codice nella posizione *pos*
 - ``search <regexp>``: ricerca i punti del codice sorgente che soddisfano l’espressione regolare regexp
@@ -48,7 +48,7 @@ Il file eseguibile per cui si vuole effettuare il debug con ``gdb`` deve essere 
 - ``info <var,fun>``: stampa informazioni su variabili e funzioni
 - ``print <expr>``: stampa la valutazione dell’espressione *expr*
 
-### Comandi per modificare dati e control path
+### Comandi per modificare dati e control path
 
 - ``set <name> <expr>``: cambia il valore di una variabile
 - ``return <expr>``: forza il valore di ritorno ad *expr* dalla funzione corrente
