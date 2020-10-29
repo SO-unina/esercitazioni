@@ -13,6 +13,6 @@ int main(){
 			i=3;
 		}
 	}
-
+	printf("Istruzione successiva \n");
 	return 0;
 }
