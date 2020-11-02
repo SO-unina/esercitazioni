@@ -10,13 +10,17 @@ Successivamente, il workflow è quello di aggiungere dei cambiamenti (dei conten
 Per utilizzare il repository delle esercitazioni del corso di Sistemi Operativi, è possibile clonare tale repository nel proprio repository personale. Assumendo nome utente ``username`` e ``my_repo`` il nome del proprio repository personale, possiamo:
 
 ```console
-$ git clone https://github.com/username/my_repo
-$ cd my_repo
 $ git clone https://github.com/SO-unina/esercitazioni
-$ # Aggiungere (eventualmente) dei file
-$ git add <file>
-$ git commit -m "Commit dei file"
-$ git push origin master
+```
+In questo modo avrete creato una copia del repository che è possibile utilizzare. Per poter ricevere tutti gli aggiornamenti dal repository remoto basta eseguire il comando ``git pull``.
+Se si vuole creare un duplicato del repository remoto e utilizzare un proprio repository privato, è necessario effettuare il cosiddetto _mirroring_. Eseguire le istruzioni come di seguito:
+
+```
+# git clone --bare https://github.com/SO-unina/esercitazioni
+# cd esercitazioni.git
+# git push --mirror https://github.com/TUO_REPOSITORY
+# cd ..
+# rm -rf esercitazioni.git
 ```
 
 Il comando ``git status`` è importante per conoscere lo stato attuale del repository locale rispetto a quello remoto. Ad esempio, è possibile sapere se c'è qualche cambiamento da aggiornare sul repository remoto oppure no.
