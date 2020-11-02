@@ -9,3 +9,6 @@ Sommario delle esercitazioni:
 - [**SO-ES3-Makefile-Librerie-GDB**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES3-Makefile-Librerie-GDB): Utilizzo di Makefile e librerie.
 
 - [**SO-ES4-Syscall-fork-exec**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES4-Syscall-fork-exec): Utilizzo di system call per la gestione dei processi.
+
+
+AAAAAAAAAAAAAAAA
