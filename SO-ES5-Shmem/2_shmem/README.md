@@ -209,9 +209,9 @@ dove,
 La funzione ``shmctl()`` restituisce ``-1`` in caso di fallimento.
 
 
-### Esempio completo
+### Shared memory contente un intero
 
-Si vuole creare una shared memory con chiave nulla (``IPC_PRIVATE``) e dimensione pari ad un intero.
+Si vuole creare una shared memory con chiave nulla (``IPC_PRIVATE``) e dimensione pari ad un intero. Lo snippet di codice per utilizzare la shared memory richiesta è il seguente:
 
 ```c
 	...
@@ -254,6 +254,43 @@ Dettagli shared memory creata:
 Contenuto SHM: 123
 ```
 
+### Shared memory contente una stringa
+
+Si vuole creare una shared memory con chiave IPC ottenuta tramite ``ftok()`` e dimensione pari a 100 byte. Tale shared memory viene utilizzata per contenere stringhe. Lo snippet di codice per utilizzare la shared memory richiesta è il seguente:
+
+```c
+	...
+	key_t shm_key = ftok(".", 'k');
+	int ds_shm = shmget(shm_key, 100, IPC_CREAT | IPC_EXCL | 0664);
+   	char * p;
+
+   if(ds_shm < 0) {
+   		// la risorsa già esiste (ma occorre una seconda shmget)
+		ds_shm = shmget(shm_key, 100, 0664);
+		p = (char*) shmat(ds_shm, NULL, 0);
+
+	} else {
+
+		// la risorsa è stata appena creata
+		p = (char*) shmat(ds_shm, NULL, 0);
+		strncpy(p, "HELLO WORLD", sizeof("HELLO WORLD")); // inizializza
+
+	}
+ 	...
+ 	printf("Contenuto SHM: %s\n", p);
+```
+
+Analizzare il codice in [main_es_str.c](main_es_str.c). Provare a compilare ed eseguire il codice:
+
+```console
+$ make
+$ ./main_es_str_ex
+Dettagli shared memory creata:
+...chiave IPC shm: 1795444441
+...descrittore shm: 262144
+...indirizzo dopo attach: 0x101c07000
+Contenuto SHM: HELLO WORLD
+```
 
 
 	
