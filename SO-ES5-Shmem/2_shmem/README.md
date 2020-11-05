@@ -5,7 +5,7 @@ I processi Unix (a differenza dei thread) non possono condividere la memoria, ne
 Una memoria condivisa (SHM) è una porzione di memoria accessibile da più processi.
 
 <p align="center">
-<img src="../images/shared_memory_example.png" width="400">
+<img src="../images/shared_memory_example.png" width="600">
 </p>
 
 L'utilizzo di una SHM in Linux prevede il seguente workflow:
