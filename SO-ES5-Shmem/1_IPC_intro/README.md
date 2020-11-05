@@ -62,9 +62,11 @@ $ ipcs -m
 key        shmid      owner      perms      bytes      nattch     status
 ```
 
-Il comando ``ipcrm`` permette di rimuovere una data struttura IPC dato il suo identificativo. Il comando è molto utilie quando lo sviluppatore non ha rimosso esplicitamente le strutture allocate (es. in caso di terminazione anomala)
+Il comando ``ipcrm`` permette di rimuovere una data struttura IPC dato il suo identificativo. Il comando è molto utilie quando lo sviluppatore non ha rimosso esplicitamente le strutture allocate (es. in caso di terminazione anomala). Ad esempio, se si vuole eliminare la shared memory avente id pari a ``1376256``:
 
-METTERE ESEMPIO
+```console
+$ ipcrm -m 1376256
+```
 
 ### Le primitive ``...get`` e ``...ctl``, e la struttura dati ``...id_ds``
 
