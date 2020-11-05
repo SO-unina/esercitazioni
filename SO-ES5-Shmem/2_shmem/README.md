@@ -242,7 +242,7 @@ Si vuole creare una shared memory con chiave nulla (``IPC_PRIVATE``) e dimension
  	...
 ```
 
-Analizzare il codice in [main_es_1_ex.c](main_es_1_ex.c). Provare a compilare ed eseguire il codice:
+Analizzare il codice in [main_es_1.c](main_es_1.c). Provare a compilare ed eseguire il codice:
 
 ```console
 $ make
