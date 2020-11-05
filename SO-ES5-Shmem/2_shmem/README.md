@@ -209,7 +209,7 @@ dove,
 La funzione ``shmctl()`` restituisce ``-1`` in caso di fallimento.
 
 
-### Shared memory contente un intero
+### Esempio 1: Shared memory contente un intero
 
 Si vuole creare una shared memory con chiave nulla (``IPC_PRIVATE``) e dimensione pari ad un intero. Lo snippet di codice per utilizzare la shared memory richiesta è il seguente:
 
@@ -254,7 +254,7 @@ Dettagli shared memory creata:
 Contenuto SHM: 123
 ```
 
-### Shared memory contente una stringa
+### Esempio 2: Shared memory contente una stringa
 
 Si vuole creare una shared memory con chiave IPC ottenuta tramite ``ftok()`` e dimensione pari a 100 byte. Tale shared memory viene utilizzata per contenere stringhe. Lo snippet di codice per utilizzare la shared memory richiesta è il seguente:
 
