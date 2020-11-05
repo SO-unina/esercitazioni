@@ -4,20 +4,31 @@
 La directory in ``git`` è chiamata **repository**.
 Per creare un primo repository basta registrarsi a [https://github.com/](https://github.com/) e creare un nuovo account. Il repository che verrà creata è remota, ovvero risiede sul server github. 
 
-Per poter utilizzare tale repository localmente (sul proprio PC) bisogna utilizzare il comando ``git clone``. 
-Successivamente, il workflow è quello di aggiungere dei cambiamenti (dei contenuti) a tale repository, aggiungere i cambiamenti al *commit* corrente, effettuare il commit, ed effettuare il *push* di questi cambiamenti verso il repository remoto. 
-
 Per utilizzare il repository delle esercitazioni del corso di Sistemi Operativi, è possibile clonare tale repository nel proprio repository personale. Assumendo nome utente ``username`` e ``my_repo`` il nome del proprio repository personale, possiamo:
 
 ```console
-$ git clone https://github.com/username/my_repo
-$ cd my_repo
 $ git clone https://github.com/SO-unina/esercitazioni
-$ # Aggiungere (eventualmente) dei file
-$ git add <file>
-$ git commit -m "Commit dei file"
-$ git push origin master
 ```
+In questo modo avrete creato una copia del repository che è possibile utilizzare. Per poter ricevere tutti gli aggiornamenti dal repository remoto basta eseguire il comando ``git pull``.
+
+Se si vuole creare un duplicato del repository remoto e utilizzare un proprio repository privato, è necessario effettuare il cosiddetto _mirroring_. Eseguire le istruzioni come di seguito:
+
+```
+# git clone --bare https://github.com/SO-unina/esercitazioni
+# cd esercitazioni.git
+# git push --mirror https://github.com/TUO_REPOSITORY
+# cd ..
+# rm -rf esercitazioni.git
+```
+Successivamente, il workflow è quello di aggiungere dei cambiamenti (dei contenuti) al proprio repository, aggiungere i cambiamenti al *commit* corrente, effettuare il commit, ed effettuare il *push* di questi cambiamenti verso il proprio repository remoto. 
+
+```
+# git add CHANGED_FILE
+# git commit -m "change file"
+# git push
+```
+
+Ovviamente, quando si effettuerà il pull dal repository delle esercitazioni potrebbero esserci dei conflitti da gestire.
 
 Il comando ``git status`` è importante per conoscere lo stato attuale del repository locale rispetto a quello remoto. Ad esempio, è possibile sapere se c'è qualche cambiamento da aggiornare sul repository remoto oppure no.
 
