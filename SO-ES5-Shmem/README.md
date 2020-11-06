@@ -1,6 +1,6 @@
 # SO-ES5-Shmem
 
-In questa lezione esercitativa vengono affrontate le risorse per la comunicazione inter-processo (IPC). In particolare, si affrontata il meccanismo di *shared memory*.
+In questa lezione esercitativa vengono affrontate le risorse per la comunicazione inter-processo (IPC). In particolare, si affronta il meccanismo di *shared memory* che permette la condivisione di aree di memoria tra più processi.
 
 Sommario degli esempi:
 
