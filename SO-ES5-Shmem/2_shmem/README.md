@@ -264,7 +264,7 @@ Si vuole creare una shared memory con chiave IPC ottenuta tramite ``ftok()`` e d
 	int ds_shm = shmget(shm_key, 100, IPC_CREAT | IPC_EXCL | 0664);
    	char * p;
 
-   if(ds_shm < 0) {
+   	if(ds_shm < 0) {
    		// la risorsa già esiste (ma occorre una seconda shmget)
 		ds_shm = shmget(shm_key, 100, 0664);
 		p = (char*) shmat(ds_shm, NULL, 0);
