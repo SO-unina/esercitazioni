@@ -174,12 +174,12 @@ Questa operazione non causa in alcun caso il blocco del processo. Nel caso in cu
 Secondo quanto descritto precedentemente, l'implementazione di una primitiva ``signal`` su semaforo è la seguente:
 
 ```c
-void Signal_Sem (int id_sem,int numsem)     {
-       struct sembuf sem_buf;
-       sem_buf.sem_num = numsem;
-       sem_buf.sem_flg = 0;
-       sem_buf.sem_op = 1;
-       semop(id_sem, &sem_buf, 1);   //semaforo verde
+void Signal_Sem (int id_sem,int numsem){
+	struct sembuf sem_buf;
+	sem_buf.sem_num = numsem;
+	sem_buf.sem_flg = 0;
+	sem_buf.sem_op = 1;
+	semop(id_sem, &sem_buf, 1);   //semaforo verde
 }
 ```
 Notare l'operazione fatta con ``semop()`` e i valori per ogni campo della struttura ``sembuf``, in particolare ``sem_buf.sem_op = 1``..
@@ -205,12 +205,12 @@ Se ``sem_op`` ha valore negativo, l'operazione si articolerà come di seguito:
 Secondo quanto descritto precedentemente, l'implementazione di una primitiva ``wait`` su semaforo è la seguente:
 
 ```c
-void Wait_Sem (int id_sem, int numsem)     {
-       struct sembuf sem_buf;
-       sem_buf.sem_num = numsem;
-       sem_buf.sem_flg = 0;
-       sem_buf.sem_op = -1;
-       semop(id_sem, &sem_buf, 1);   //semaforo rosso
+void Wait_Sem (int id_sem, int numsem){
+	struct sembuf sem_buf;
+	sem_buf.sem_num = numsem;
+	sem_buf.sem_flg = 0;
+	sem_buf.sem_op = -1;
+	semop(id_sem, &sem_buf, 1);   //semaforo rosso
 }
 ```
 Notare l'operazione fatta con ``semop()`` e i valori per ogni campo della struttura ``sembuf``, in particolare ``sem_buf.sem_op = -1``.
@@ -229,10 +229,10 @@ Se ``sem_op`` ha valore nullo, l’operazione specificata (*wait-for-zero*) è a
 
 ```c
 void Wait_for_Zero_Sem (int id_sem, int numsem){
-       struct sembuf sem_buf;
-       sem_buf.sem_num = numsem;
-       sem_buf.sem_flg = 0;
-       sem_buf.sem_op = 0;
-       semop(id_sem, &sem_buf, 1);   //semaforo rosso
+	struct sembuf sem_buf;
+	sem_buf.sem_num = numsem;
+	sem_buf.sem_flg = 0;
+	sem_buf.sem_op = 0;
+	semop(id_sem, &sem_buf, 1);   //semaforo rosso
 }
 ```
