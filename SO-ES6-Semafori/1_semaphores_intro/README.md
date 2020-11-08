@@ -6,7 +6,7 @@ I processi condividono tra loro una **istanza di semaforo** ``s``. Tramite quest
 Il modello contettuale semaforico è mostrato nella seguente figura:
 
 <p align="center">
-<img src="images/semafori_modello.png" width="600">
+<img src="../images/semafori_modello.png" width="600">
 </p>
 
 L'uso classico di un semaforo è per implementare un meccanismo di **locking** che garantisca la mutua esclusione tra processi.
