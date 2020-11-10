@@ -1,4 +1,4 @@
-## Esercizio sui semafori
+## Esercizio 1.
 
 In questo esercizio, si implementa una comunicazione inter-processo utilizzando una shared memory, disciplinando l'accesso con un semaforo. In particolare, si vuole creare 2 processi figli che incrementano per 100 volte una variable intera memorizzata nella shared memory.
 
