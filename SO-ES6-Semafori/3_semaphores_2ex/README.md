@@ -11,7 +11,7 @@ Il processo padre e i figli dovranno inoltre condividere in **mutua esclusione**
 </p>
 
 
-I file da modificare e aggiungere il codice mancante sono i seguenti:
+I file da modificare e completare con il codice mancante sono i seguenti:
 
 - [main.c](main.c)
 
