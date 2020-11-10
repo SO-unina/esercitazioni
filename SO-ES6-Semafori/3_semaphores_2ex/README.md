@@ -13,6 +13,6 @@ Il processo padre e i figli dovranno inoltre condividere in **mutua esclusione**
 
 I file da modificare e aggiungere il codice mancante sono i seguenti:
 
-[main.c](main.c)
+- [main.c](main.c)
 
-[processi-mutua-esclusione.c](processi-mutua-esclusione.c)
+- [processi-mutua-esclusione.c](processi-mutua-esclusione.c)
