@@ -13,3 +13,5 @@ Sommario delle esercitazioni:
 - [**SO-ES5-Shmem**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES5-Shmem): Utilizzo di shared memory per la comunicazione inter-processo.
 
 - [**SO-ES6-Semafori**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES6-Semafori): Utilizzo di semafori per la sincronizzazione inter-processo.
+
+> **_N.B.:_** Vuoi usare VIM come editor testuale? Utilizza questo [cheatsheet](images/vim_cheatsheet.png) per una guida veloce sui comandi più comuni di VIM e gioca a [vim adventures](https://vim-adventures.com/) per allenarti ad usare VIM.
