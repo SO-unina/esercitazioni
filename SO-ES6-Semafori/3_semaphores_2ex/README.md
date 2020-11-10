@@ -6,6 +6,11 @@ Ciascuno dei processi figli dovrà lavorare su una **porzione distinta del vetto
 
 Il processo padre e i figli dovranno inoltre condividere in **mutua esclusione** un buffer, atto a contenere un singolo valore intero, utilizzando una **area di memoria condivisa e semafori UNIX**. Al termine della ricerca, il processo figlio dovrà consultare il valore attualmente presente nel buffer condiviso. Se il valore che ha trovato è minore di quello del buffer, il processo figlio dovrà sovrascrivere il buffer con il valore che ha trovato. Al termine di tutti i processi figli, il padre potrà prelevare il valore minimo assoluto dal buffer condiviso.
 
+<p align="center">
+<img src="../images/calcolo_parallelo_su_un_vettore_condiviso.png" width="600">
+</p>
+
+
 I file da modificare e aggiungere il codice mancante sono i seguenti:
 
 [main.c](main.c)
