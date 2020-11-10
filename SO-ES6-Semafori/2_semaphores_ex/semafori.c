@@ -71,7 +71,13 @@ int main() {
 				int tmp = *ptr;
                                 printf("Processo %d ha letto\n", i);
 				
+                                // CORRETTO: *ptr = tmp + 1;
+                                // SBAGLIATO: *ptr++;
+                                // SBAGLIATO: *(ptr)++;
+                                // CORRETTO: (*ptr)++;
+
                                 *ptr = tmp + 1;
+
                                 printf("Processo %d ha incrementato\n", i);
 
 				//FINE SEZIONE CRITICA
