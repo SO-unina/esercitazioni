@@ -1,14 +1,14 @@
-all: semafori
+all: ex_sem
 
-semafori: semafori.o procedure.o
-	gcc semafori.o procedure.o -o semafori
+ex_sem: main.o semafori.o
+	gcc -o ex_sem main.o semafori.o
 
-semafori.o: semafori.c procedure.h
+main.o: main.c semafori.h
+	gcc -c main.c -o main.o
+
+semafori.o: semafori.c semafori.h
 	gcc -c semafori.c -o semafori.o
-
-procedure.o: procedure.c procedure.h
-	gcc -c procedure.c -o procedure.o
 
 clean:
 	rm -f *.o
-	rm -f semafori
+	rm -f ex_sem
