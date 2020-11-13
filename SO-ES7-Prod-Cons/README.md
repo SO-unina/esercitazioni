@@ -5,5 +5,5 @@ In questa lezione esercitativa viene affrontato il problema **produttore-consuma
 Sommario degli esempi:
 
 - [**1_prodcons_singolo_buffer**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/1_prodcons_singolo_buffer): Produttore-Consumatore singolo buffer;
-- [**2_prodcons_coda_circolare**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/2_prodcons_coda_circolare): Produttore-Consumatore con con buffer multiplo gestico con coda circolare;
-- [**3_semaphores_2ex**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/3_prodcons_vettore_stato): Produttore-Consumatore con buffer multiplo e vettore di stato;
+- [**2_prodcons_coda_circolare**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/2_prodcons_coda_circolare): Produttore-Consumatore con con pool di buffer gestito come coda circolare;
+- [**3_semaphores_2ex**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/3_prodcons_vettore_stato): Produttore-Consumatore con pool di buffer gestito con vettore di stato;
