@@ -58,7 +58,7 @@ void consumatore(struct prodcons *, int);
 dove, il primo argomento è un puntatore alla struttura che gestisce il pool di buffer e il vettore di stato memorizzati nella shared memory creata, mentre il secondo parametro indica il descrittore del semaforo da utilizzare per le operazioni di wait su semaforo (i.e., ``Wait_Sem``) e signal su semaforo (i.e., ``Signal_Sem``) necessarie per la cooperazione e competizione tra produttore e consumatore.
 Il valore prodotto è un intero generato tramite la funzione ``rand()``.
 
-Analizzare il file [procedure.c](procedure.c) in cui vengono implementate le funzioni di produzione e consumazione, e il file [prodcons_coda_circolare.c](prodcons_coda_circolare.c) dove vengono inizializzati i semafori necessari.
+Analizzare il file [procedure.c](procedure.c) in cui vengono implementate le funzioni di produzione e consumazione, e il file [prodcons_vettore_stato.c](prodcons_vettore_stato.c) dove vengono inizializzati i semafori necessari.
 Compilare ed eseguire il codice:
 
 ```console
