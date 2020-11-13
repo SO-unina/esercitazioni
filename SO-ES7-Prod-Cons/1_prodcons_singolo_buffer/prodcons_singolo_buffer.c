@@ -7,67 +7,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define SPAZIO_DISPONIBILE 0
-#define MESSAGGIO_DISPONIBILE 1
-
-
-void Wait_Sem(int semid, int semnum) {
-	struct sembuf s;
-
-	s.sem_flg = 0;
-	s.sem_num = semnum;	// SPAZIO_DISPONIBILE oppure MESS_DISP
-	s.sem_op = -1;
-
-	int r = semop(semid, &s, 1);
-	
-	if(r<0) { perror("ERRORE signal"); }
-}
-
-
-void Signal_Sem(int semid, int semnum) {
-	struct sembuf s;
-
-	s.sem_flg = 0;
-	s.sem_num = semnum;
-	s.sem_op = 1;
-
-	int r = semop(semid, &s, 1);
-
-	if(r<0) { perror("ERRORE signal"); }
-}
-
-
-
-void produttore(int * p, int ds_sem) {
-
-	printf("produttore è fermo prima di wait\n");
-	Wait_Sem(ds_sem, SPAZIO_DISPONIBILE);
-	printf("produttore si sblocca dopo la wait\n");
-
-
-	sleep(2);
-
-	*p = rand() % 100;
-
-	printf("Il valore prodotto = %d\n", *p);
-
-
-	Signal_Sem(ds_sem, MESSAGGIO_DISPONIBILE);
-}
-
-void consumatore(int * p, int ds_sem) {
-
-	printf("consumatore è fermo prima di wait\n");
-	Wait_Sem(ds_sem, MESSAGGIO_DISPONIBILE);
-	printf("consumatore si sblocca dopo la wait\n");
-
-
-	sleep(2);
-	printf("Il valore consumato = %d\n", *p);
-
-
-	Signal_Sem(ds_sem, SPAZIO_DISPONIBILE);
-}
+#include "semafori.h"
+#include "procedure.h"
 
 int main() {
 
