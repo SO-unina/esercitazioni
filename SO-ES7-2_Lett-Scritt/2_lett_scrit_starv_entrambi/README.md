@@ -9,7 +9,7 @@ I vincoli del problema sono:
 
 - i processi lettori possono accedere *contemporaneamente* alla risorsa;
 - i processi scrittori hanno accesso *esclusivo* alla risorsa;
-- i lettori e scrittori *si escludono mutuamente *dall'uso della risorsa.
+- i lettori e scrittori *si escludono mutuamente* dall'uso della risorsa.
 
 In particolare, in questo esercizio affrontiamo lo scenario in cui abbiamo **starvation di lettori e di scrittori**.
 
