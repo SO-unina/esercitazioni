@@ -36,13 +36,13 @@ int main() {
 	if(ds_sem<0) { perror("SEM errore"); exit(1); }
 
 	
-    //SEMAFORI COOPERAZIONE tra i prod e i cons
-    semctl(ds_sem, SPAZIO_DISPONIBILE, SETVAL, DIM_BUFFER);
-    semctl(ds_sem, MESSAGGIO_DISPONIBILE, SETVAL, 0);
+        //SEMAFORI COOPERAZIONE tra i prod e i cons
+        semctl(ds_sem, SPAZIO_DISPONIBILE, SETVAL, DIM_BUFFER);
+        semctl(ds_sem, MESSAGGIO_DISPONIBILE, SETVAL, 0);
 	
-    //SEMAFORI COMPETIZIONE tra i prod e i cons
-    semctl(ds_sem, MUTEX_C, SETVAL, 1);
-    semctl(ds_sem, MUTEX_P, SETVAL, 1);
+        //SEMAFORI COMPETIZIONE tra i prod e i cons
+        semctl(ds_sem, MUTEX_C, SETVAL, 1);
+        semctl(ds_sem, MUTEX_P, SETVAL, 1);
 
 
 
