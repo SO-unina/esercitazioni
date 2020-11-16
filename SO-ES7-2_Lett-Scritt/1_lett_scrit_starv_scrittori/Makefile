@@ -14,4 +14,4 @@ semafori.o: semafori.c semafori.h
 
 clean:
 	rm -f *.o 
-	rm -f ./start
+	rm -f lettore_scrittore_exe

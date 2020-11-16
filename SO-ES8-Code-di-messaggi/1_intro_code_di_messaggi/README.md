@@ -22,6 +22,19 @@ Una mailbox può essere vista come una coda di messaggi. Essa é caratterizzata 
 
 #### Creazione di una coda di messaggi: ``msgget()``
 
+Per creare una nuova coda di messaggi, o accedere ad una esistente, bisogna invocare la system call ``msgget()``.
+
+```c
+#include <sys/types.h>       
+#include <sys/ipc.h>
+#include <sys/msg.h>
+
+int msgget(key_t key, int msgflg);
+```
+
+
+
+
 #### Invio di un messaggio: ``msgsnd()``
 
 #### Ricezione di un messaggio: ``msgrcv()``
