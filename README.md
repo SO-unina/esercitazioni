@@ -14,4 +14,10 @@ Sommario delle esercitazioni:
 
 - [**SO-ES6-Semafori**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES6-Semafori): Utilizzo di semafori per la sincronizzazione inter-processo.
 
+- [**SO-ES7-1_Prod-Cons**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-1_Prod-Cons): Utilizzo di semafori e shared memory per la soluzione al problema Produttori-Consumatori.
+
+- [**SO-ES7-2_Lett-Scritt**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-2_Lett-Scritt): Utilizzo di semafori e shared memory per la soluzione al problema Lettori-Scrittori.
+
+
+
 > **_N.B.:_** Vuoi usare VIM come editor testuale? Utilizza questo [cheatsheet](images/vim_cheatsheet.png) per una guida veloce sui comandi più comuni di VIM e gioca a [vim adventures](https://vim-adventures.com/) per allenarti ad usare VIM.
