@@ -4,7 +4,7 @@ In questa lezione esercitativa viene affrontato il problema della comunicazione 
 
 Sommario degli esempi:
 
-- [**1_intro_code_di_messaggi**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/1_intro_code_di_messaggi): Introduzione sulle code di messaggi in Linux;
-- [**2_prod_cons_async**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/2_prod_cons_async): Utilizzo delle code di messaggi per risolvere il problema produttore-consumatore singolo buffer tramite send asincrona;
-- [**3_prod_cons_sync**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/3_prod_cons_sync): Utilizzo delle code di messaggi per risolvere il problema produttore-consumatore singolo buffer tramite send sincrona;
-- [**4_prod_cons_mult**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-Prod-Cons/4_prod_cons_mult): Esercizio sull'utilizzo delle code di messaggi con applicazioni su più eseguibili;
+- [**1_intro_code_di_messaggi**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES8-Code-di-messaggi/1_intro_code_di_messaggi): Introduzione sulle code di messaggi in Linux;
+- [**2_prod_cons_async**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES8-Code-di-messaggi/2_prod_cons_async): Utilizzo delle code di messaggi per risolvere il problema produttore-consumatore singolo buffer tramite send asincrona;
+- [**3_prod_cons_sync**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES8-Code-di-messaggi/3_prod_cons_sync): Utilizzo delle code di messaggi per risolvere il problema produttore-consumatore singolo buffer tramite send sincrona;
+- [**4_prod_cons_mult**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES8-Code-di-messaggi/4_prod_cons_mult): Esercizio sull'utilizzo delle code di messaggi con applicazioni su più eseguibili;
