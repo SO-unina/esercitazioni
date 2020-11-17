@@ -1,4 +1,4 @@
-# SO-ES7-Prod-Cons
+# SO-ES7-2_Lett-Scritt
 
 In questa lezione esercitativa viene affrontato il problema **lettori-scrittori in applicazioni multiprocesso**. Si vedrà come risolvere tale problema grazie all'utilizzo delle risorse IPC shared memory e semafori.
 

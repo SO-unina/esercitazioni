@@ -71,5 +71,8 @@ int main() {
 	wait(NULL);
 	printf("secondo figlio terminato\n");
 
-
+        shmctl(ds_shm, IPC_RMID, NULL);
+       	semctl(ds_sem, 0, IPC_RMID);
+        
+        return 0;
 }

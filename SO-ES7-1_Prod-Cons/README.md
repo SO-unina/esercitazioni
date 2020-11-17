@@ -1,4 +1,4 @@
-# SO-ES7-Prod-Cons
+# SO-ES7-1_Prod-Cons
 
 In questa lezione esercitativa viene affrontato il problema **produttore-consumatore in applicazioni multiprocesso**. Si vedrà come risolvere tale problema grazie all'utilizzo delle risorse IPC shared memory e semafori.
 
