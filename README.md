@@ -18,6 +18,7 @@ Sommario delle esercitazioni:
 
 - [**SO-ES7-2_Lett-Scritt**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES7-2_Lett-Scritt): Utilizzo di semafori e shared memory per la soluzione al problema Lettori-Scrittori.
 
+- [**SO-ES8-Code-di-messaggi**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES8-Code-di-messaggi): Utilizzo di code di messaggi per la comunicazione ad ambiente locale.
 
 
 > **_N.B.:_** Vuoi usare VIM come editor testuale? Utilizza questo [cheatsheet](images/vim_cheatsheet.png) per una guida veloce sui comandi più comuni di VIM e gioca a [vim adventures](https://vim-adventures.com/) per allenarti ad usare VIM.
