@@ -74,7 +74,7 @@ void Scrittore(int sem, Buffer *buf){
 
         struct timeval t1;
     	struct timezone t2;
- 	gettimeofday(&t1,&t2);    //valore diverso ad ogni produzione
+ 	gettimeofday(&t1,&t2);    //valore diverso ad ogni scrittura
     	buf->messaggio =t1.tv_usec;
 	sleep(1);
     	printf("Valore scritto: <%ld> \n", buf->messaggio);
