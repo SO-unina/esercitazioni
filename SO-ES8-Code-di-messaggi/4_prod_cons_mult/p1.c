@@ -30,7 +30,7 @@ int main() {
 	int i;
 	for(i = 0; i < 11;i++){
 		m_p1.numero = generaFloat(0,10);
-		printf("Mando messaggio: <%lu,%f>\n",m_p1.processo,m_p1.numero);	
+		printf("Invio messaggio: <%lu,%f>\n",m_p1.processo,m_p1.numero);	
 		msgsnd(id_queue,(void *)&m_p1,sizeof(struct msg_calc)-sizeof(long),0);
 		sleep(1);
 	}
