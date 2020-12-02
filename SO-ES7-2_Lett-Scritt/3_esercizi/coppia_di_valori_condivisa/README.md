@@ -15,11 +15,9 @@ scritture, e i lettori 5 letture.
 
 Il programma deve essere sviluppato in tre eseguibili distinti (utilizzare la ``exec()``), di cui:
 
-- il primo eseguibile è eseguito da un processo padre che crea tre
-processi figli, ciascuno dei quali eseguirà uno degli altri eseguibili;
-- un eseguibile per il codice dei lettori; (3) un eseguibile per il
-codice dello scrittore.
-
+1. il primo eseguibile è eseguito da un processo padre che crea tre processi figli, ciascuno dei quali eseguirà uno degli altri eseguibili;
+2. un eseguibile per il codice dei lettori;
+3. un eseguibile per il codice dello scrittore.
 
 ![image](../../images/lettori-scrittori_con_semafori_su_una_coppia_di_valori_condivisa.png)
 
