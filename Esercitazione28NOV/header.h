@@ -8,7 +8,6 @@
 typedef struct {
 
         int numlettori;
-        int numscrittori;
         char stringa [MAX_STR_DIM];
 
 } Buffer;
