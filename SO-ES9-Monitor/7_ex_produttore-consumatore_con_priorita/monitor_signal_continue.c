@@ -1,5 +1,5 @@
 /*************************************Monitor*************************************************/
-// Implementazione di un Monitor 
+// Implementazione di un Monitor Signal and Continue 
 
 
 #include <sys/ipc.h>
@@ -8,7 +8,8 @@
 #include <sys/shm.h>
 #include <stdio.h>
 #include <unistd.h>
-#include "monitor_hoare.h"
+
+#include "monitor_signal_continue.h"
 
 
 //Funzioni di utilita' private alla libreria Monitor
@@ -30,12 +31,6 @@ void init_monitor (Monitor *M,int num_var){
     semctl(M->mutex,0,SETVAL,1);
 
 
-    //alloca e inizializza il semaforo per la coda urgent
-    M->urgent_sem=semget(IPC_PRIVATE,1,IPC_CREAT|0664);
-
-    semctl(M->urgent_sem,0,SETVAL,0);
-
-
     //alloca e inizializza i semafori con cui realizzare le var.condition
     M->id_conds=semget(IPC_PRIVATE,num_var,IPC_CREAT|0664);
 
@@ -43,27 +38,21 @@ void init_monitor (Monitor *M,int num_var){
          semctl(M->id_conds,i,SETVAL,0);
 
 
-    //alloca un contatore per ogni var.condition, più un contatore per la coda urgent
-    M->id_shared=shmget(IPC_PRIVATE,(num_var+1)*sizeof(int),IPC_CREAT|0664);
+    //alloca un contatore per ogni var.condition
+    M->id_shared=shmget(IPC_PRIVATE,num_var*sizeof(int),IPC_CREAT|0664);
 
-    printf("(num_var+1)*sizeof(int) = %d\n", (num_var+1)*sizeof(int));
 
     //effettua l'attach all'array di contatori appena allocato
     M->cond_counts=(int*) (shmat(M->id_shared,0,0));
-    
-    printf("M->cond_counts %p\n", M->cond_counts);
 
     M->num_var_cond = num_var;
-    
-    M->urgent_count = M->cond_counts + M->num_var_cond;
 
-    printf("M->urgent_count %p\n", M->urgent_count);
 
-    //inizializza i contatori per le var.condition e per la coda urgent
+
+    //inizializza i contatori per le var.condition
     for (i=0; i<num_var; i++)
         M->cond_counts[i]=0;
 
-    *(M->urgent_count)=0;
 
 #ifdef DEBUG_
     printf("Monitor inizializzato con %d condition variables. Buona Fortuna ! \n",num_var);
@@ -92,30 +81,20 @@ void leave_monitor(Monitor* M){
 
 #ifdef DEBUG_
     printf("<%d> Uscito dal monitor  \n", getpid());
-#endif
+    printf("<%d> -Monitor- signal sul mutex del monitor \n", getpid());
+#endif 
 
-    if( *(M->urgent_count) > 0 ) {
-#ifdef DEBUG_
-	printf("<%d> -Monitor- signal sulla coda urgent \n", getpid());
-#endif
-        Signal_Sem(M->urgent_sem,0); 
-    } else {
-#ifdef DEBUG_
-	printf("<%d> -Monitor- signal sul mutex del monitor \n", getpid());
-#endif
-        Signal_Sem(M->mutex,0);
-    }
+    Signal_Sem(M->mutex,0);
 }
 
 
 void remove_monitor(Monitor* M){
     semctl(M->mutex,0,IPC_RMID,0);
-    semctl(M->urgent_sem,0,IPC_RMID,0);
     semctl(M->id_conds,M->num_var_cond,IPC_RMID,0);
     shmctl(M->id_shared,IPC_RMID,0);
 
 #ifdef DEBUG_
-    printf(" \n Il Monitor è stato rimosso ! Arrivederci \n", getpid());
+    printf(" \n Il Monitor è stato rimosso ! Arrivederci \n");
 #endif
 
 }
@@ -134,21 +113,24 @@ void wait_condition(Monitor* M,int id_var){
 
       M->cond_counts[id_var]=M->cond_counts[id_var]+1;
 
-      if( *(M->urgent_count) > 0 ) {
-#ifdef DEBUG_
-	printf("<%d> -Monitor- signal sulla coda urgent \n", getpid());
-#endif
-          Signal_Sem(M->urgent_sem,0); 
-      } else {
+
 #ifdef DEBUG_
 	printf("<%d> -Monitor- signal sul mutex del monitor \n", getpid());
 #endif
-          Signal_Sem(M->mutex,0);
-      }
+
+      Signal_Sem(M->mutex,0);
+     
+#ifdef DEBUG_
+	printf("<%d> -Monitor- wait sul semaforo %d del monitor \n", getpid(),id_var);
+#endif
 
       Wait_Sem(M->id_conds,id_var);
 
-      M->cond_counts[id_var]=M->cond_counts[id_var]-1;
+#ifdef DEBUG_
+	printf("<%d> -Monitor- wait sul mutex del monitor \n", getpid());
+#endif
+   
+	Wait_Sem(M->mutex,0);
 }
 
 void signal_condition(Monitor* M,int id_var){
@@ -163,29 +145,15 @@ void signal_condition(Monitor* M,int id_var){
     printf("<%d> -Monitor- tentativo di signal; n.ro proc. in attesa sulla cond. n. %d = %d\n", getpid(), id_var,M->cond_counts[id_var]);
 #endif     
 
-    (*(M->urgent_count))++;
 
-    if(M->cond_counts[id_var]>0) {
+   if(M->cond_counts[id_var] > 0){
+	M->cond_counts[id_var]--;
+	#ifdef DEBUG_
+    	printf("<%d> -Monitor- signal sul semaforo %d\n", getpid(), id_var);
+	#endif
+	Signal_Sem(M->id_conds,id_var);
+   }
 
-            Signal_Sem(M->id_conds,id_var);
-
-#ifdef DEBUG_
-            printf("<%d> -Monitor- invocata la signal sulla condition numero %d\n", getpid(), id_var);
-#endif
-
-#ifdef DEBUG_
-            printf("<%d> -Monitor- processo in attesa sulla coda urgent \n", getpid());
-#endif
-
-            Wait_Sem(M->urgent_sem,0);
-
-#ifdef DEBUG_
-            printf("<%d> -Monitor- processo uscito dalla coda urgent \n", getpid());
-#endif
-
-    }
-
-    (*(M->urgent_count))--;
 }
 
 

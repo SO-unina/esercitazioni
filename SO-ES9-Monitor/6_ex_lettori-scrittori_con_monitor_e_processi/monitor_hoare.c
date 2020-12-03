@@ -1,5 +1,5 @@
 /*************************************Monitor*************************************************/
-// Implementazione di un Monitor 
+// Implementazione di un Monitor signal-and-wait, con coda urgent (soluzione di Hoare)
 
 
 #include <sys/ipc.h>
@@ -8,6 +8,7 @@
 #include <sys/shm.h>
 #include <stdio.h>
 #include <unistd.h>
+
 #include "monitor_hoare.h"
 
 
@@ -46,18 +47,14 @@ void init_monitor (Monitor *M,int num_var){
     //alloca un contatore per ogni var.condition, più un contatore per la coda urgent
     M->id_shared=shmget(IPC_PRIVATE,(num_var+1)*sizeof(int),IPC_CREAT|0664);
 
-    printf("(num_var+1)*sizeof(int) = %d\n", (num_var+1)*sizeof(int));
 
     //effettua l'attach all'array di contatori appena allocato
     M->cond_counts=(int*) (shmat(M->id_shared,0,0));
-    
-    printf("M->cond_counts %p\n", M->cond_counts);
 
     M->num_var_cond = num_var;
-    
+
     M->urgent_count = M->cond_counts + M->num_var_cond;
 
-    printf("M->urgent_count %p\n", M->urgent_count);
 
     //inizializza i contatori per le var.condition e per la coda urgent
     for (i=0; i<num_var; i++)
@@ -115,7 +112,7 @@ void remove_monitor(Monitor* M){
     shmctl(M->id_shared,IPC_RMID,0);
 
 #ifdef DEBUG_
-    printf(" \n Il Monitor è stato rimosso ! Arrivederci \n", getpid());
+    printf(" \n Il Monitor è stato rimosso ! Arrivederci \n");
 #endif
 
 }
