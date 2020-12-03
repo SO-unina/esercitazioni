@@ -136,7 +136,7 @@ Il campo ``msgtyp`` (tipo del messaggio) svolge importanti funzioni, infatti:
 Per il campo ``msgflg``:
 
 - Se impostato a ``0`` indica una **ricezione bloccante**: se non ci sono messaggi da consumare nella mailbox, il processo si *sospende* sulla chiamata a ``msgrcv()`` fino al giungere del messaggio;
-- Se impostato a ``IPC_NOWAIT``, ho una **ricezione non bloccante**: se non ci sono messaggi viene restituito ``-1``.
+- Se impostato a ``IPC_NOWAIT``, ho una **ricezione non bloccante**: se non ci sono messaggi del tipo specificato in ``msgtyp`` viene restituito ``-1``.
 
 La chiamata a ``msgrcv()`` restituisce ``0`` se non si sono verificati errori.
 
