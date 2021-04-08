@@ -4,5 +4,5 @@ In questa lezione esercitativa vengono affrontate le risorse per la comunicazion
 
 Sommario degli esempi:
 
-- [**1_IPC_intro**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES5-Shmem/1_IPC_intro): Introduzione sulle risorse IPC;
-- [**2_shmem**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES5-Shmem/2_shmem): Primitive di utilizzo della risorsa IPC shared memory;
+- [**1_IPC_intro**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES05-Shmem/1_IPC_intro): Introduzione sulle risorse IPC;
+- [**2_shmem**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES05-Shmem/2_shmem): Primitive di utilizzo della risorsa IPC shared memory;

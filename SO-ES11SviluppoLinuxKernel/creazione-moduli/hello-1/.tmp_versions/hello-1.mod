@@ -1,0 +1,2 @@
+/home/test/OS_Esercitazioni/SO-ES10-Esempi-Codice-Linux/creazione-moduli/hello-1/hello-1.ko
+/home/test/OS_Esercitazioni/SO-ES10-Esempi-Codice-Linux/creazione-moduli/hello-1/hello-1.o
