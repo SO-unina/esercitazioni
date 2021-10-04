@@ -13,7 +13,7 @@ La macchina è contenuta in un file con estensione **.ova** da scaricare tramite
 - [LINK1](https://communitystudentiunina-my.sharepoint.com/personal/roberto_natella_unina_it/Documents/Ubuntu-Linux-20-04-SO.ova), consigliata per macchine con hardware di più alto livello (8+ CPU fisiche, 8GB RAM)
 - [LINK2](XXX), consigliata per macchine con hardware (4 CPU fisiche, 4GB RAM);
 
-Tale file è stato creato per mezzo del programma **Oracle VirtualBox**, che deve essere installato sulla macchina su cui si intende far girare la macchina virtuale. L'applicativo VirtualBox è un gestore di macchine virtuali gratuito e facilmente installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/)](https://www.virtualbox.org/)).
+Tale file è stato creato per mezzo del programma **Oracle VirtualBox**, che deve essere installato sulla macchina su cui si intende far girare la macchina virtuale. L'applicativo VirtualBox è un gestore di macchine virtuali gratuito e facilmente installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/](https://www.virtualbox.org/)).
 
 La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtuale) è la versione **6.1**.
 
