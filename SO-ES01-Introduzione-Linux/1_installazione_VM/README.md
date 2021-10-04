@@ -8,9 +8,7 @@
 
 La macchina virtuale ospita il sistema operativo **Ubuntu 20.04 LTS** (una distribuzione leggera di **Linux** ), e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.). L'username e password dell'utente di default sono rispettivamente **so** e **so**.
 
-La macchina è contenuta in un file con estensione **.ova** da scaricare tramite il link OneDrive:
-
-[https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/roberto\_natella\_unina\_it/EbruKk\_SvlxBipH0\_cLe-eABcuFc2skO0t6EUAErq4cFOw?e=FkDLUZ](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/roberto_natella_unina_it/EbruKk_SvlxBipH0_cLe-eABcuFc2skO0t6EUAErq4cFOw?e=FkDLUZ)
+La macchina è contenuta in un file con estensione **.ova** da scaricare tramite questo [link](https://communitystudentiunina-my.sharepoint.com/:v:/g/personal/luigi_desimone_unina_it/EXQJjI5PkKNLhgYLK-IshAABzcCuOeoaDEANWaW9zny0tw?e=4hWrnw).
 
 Tale file è stato creato per mezzo del programma **Oracle VirtualBox**, che deve essere installato sulla macchina su cui si intende far girare la macchina virtuale. L'applicativo VirtualBox è un gestore di macchine virtuali gratuito e facilmente installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/)](https://www.virtualbox.org/)).
 
