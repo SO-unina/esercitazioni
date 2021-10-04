@@ -2,7 +2,11 @@
 
 In questa lezione esercitativa viene affrontata l'installazione di una macchina virtuale Linux e viene mostrato l'utilizzo dei comandi base della shell di Linux. 
 
-> **_N.B.:_** Se si vuole subito utilizzare un terminale Linux e provare a sviluppare codice C e usare comandi della shell, andare su: [http://cs-education.github.io/sys/#VM](http://cs-education.github.io/sys/#VM). In ogni caso, è **caldamento consigliato** seguire le istruzioni per installare una macchina virtuale Linux personale.
+> **_N.B.:_** Se si vuole subito utilizzare un terminale Linux e provare a sviluppare codice C e usare comandi della shell, è sfruttare le seguenti webapp: 
+> - [http://cs-education.github.io/sys/#VM](http://cs-education.github.io/sys/#VM)
+> - [https://replit.com/](https://replit.com/)
+> 
+> In ogni caso, è **caldamento consigliato** seguire le istruzioni per installare una macchina virtuale Linux personale.
 
 Sommario degli esempi:
 
