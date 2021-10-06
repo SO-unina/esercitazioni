@@ -6,7 +6,7 @@ In questa lezione esercitativa viene affrontata l'installazione di una macchina 
 > - [http://cs-education.github.io/sys/#VM](http://cs-education.github.io/sys/#VM)
 > - [https://replit.com/](https://replit.com/)
 > 
-> In ogni caso, è **caldamento consigliato** seguire le istruzioni per installare una macchina virtuale Linux personale.
+> In ogni caso, è **caldamente consigliato** seguire le istruzioni per installare una macchina virtuale Linux personale.
 
 Sommario degli esempi:
 
