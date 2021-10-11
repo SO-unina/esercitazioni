@@ -17,7 +17,7 @@ target: dipendenze
 Dato un particolare **target**, ``make`` esegue i comandi presenti alla linea successiva, se le dipendenze sono tutte soddisfatte.
 Le dipendenze sono semplicemente file da cui il target dipende. 
 
-> **_N.B.:_** l'etichetta [tab] indica il carattere che si ottiene con il tasto TAB della tastiera. Tale carattere è necessario, altrimenti otterremo un errore di interpretazione.
+> **_N.B.:_** l'etichetta [tab] indica il carattere che si ottiene con il tasto TAB della tastiera (codice ASCII 9 in decimale e esadecimale). Tale carattere è necessario, altrimenti otterremo un errore di interpretazione.
 
 Il file **Makefile** utilizzato in quest'esercitazione è il seguente:
 
