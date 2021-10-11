@@ -1,5 +1,8 @@
 ## Utilzzo base di ``git``
 
+> :warning: Il supporto all'autenticazione tramite password è stato rimosso il 13 Agosto 2021. E' necessario dunque creare un **Personal Access Token**. Per la creazione, consultare la guida al seguente [link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token).
+
+
 ``git`` è un sistema di controllo delle versioni (versioning system), e mantiene l'intera storia (in termini di modifiche) di una directory.
 La directory in ``git`` è chiamata **repository**.
 Per creare un primo repository basta registrarsi a [https://github.com/](https://github.com/) e creare un nuovo account. Il repository che verrà creata è remota, ovvero risiede sul server github. 
