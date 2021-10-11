@@ -6,7 +6,7 @@ start: lib.o main.o
 lib.o: lib.cpp lib.h
 	g++ -c lib.cpp
 
-main.o: main.cpp lib.h
+main.o: main_MIO.cpp lib.h
 	g++ -c main.cpp
 
 clean:
