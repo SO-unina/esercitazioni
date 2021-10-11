@@ -10,7 +10,7 @@ Per creare un primo repository basta registrarsi a [https://github.com/](https:/
 Per utilizzare il repository delle esercitazioni del corso di Sistemi Operativi, è possibile clonare tale repository nel proprio repository personale. Assumendo nome utente ``username`` e ``my_repo`` il nome del proprio repository personale, possiamo:
 
 ```console
-$ git clone https://github.com/SO-unina/esercitazioni
+$ git clone https://``username``github.com/SO-unina/esercitazioni
 ```
 In questo modo avrete creato una copia del repository che è possibile utilizzare. Per poter ricevere tutti gli aggiornamenti dal repository remoto basta eseguire il comando ``git pull``.
 
