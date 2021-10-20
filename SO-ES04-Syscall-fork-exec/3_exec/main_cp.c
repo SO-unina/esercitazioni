@@ -31,7 +31,7 @@ int main(int argc, char * argv[]) {
                         printf(".\n");
                  }
 
-                execl("/bin/cp", "cp", argv[1], argv[2], 0);
+                execl("/bin/cp", "cp", argv[1], argv[2], NULL);
 
                 perror("Se arrivo in questo punto, qualcosa è andato storto...\n");
 

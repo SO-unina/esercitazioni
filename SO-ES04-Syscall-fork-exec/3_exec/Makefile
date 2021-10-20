@@ -1,12 +1,12 @@
-all: cp_exe ls_exe
+all: main_cp main_ls
 
-cp_exe: main_cp.c
-	gcc -o cp_exe main_cp.c
+main_cp: main_cp.c
+	gcc -o main_cp main_cp.c
 
-ls_exe: main_ls.c
-	gcc -o ls_exe main_ls.c
+main_ls: main_ls.c
+	gcc -o main_ls main_ls.c
 
 clean:
-	rm -rf cp_exe
-	rm -rf ls_exe
+	rm -rf main_cp
+	rm -rf main_ls
 	rm -rf *.o
