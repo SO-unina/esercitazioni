@@ -42,7 +42,7 @@ In Linux, sono stabiliti alcuni PID di default per specifici processi. Ad esempi
 - Processo ``init``: PID = 1
 - Processo ``pagedaemon``: PID = 2
 
-Per poter analizzare i PID associati ai processi attualmente sul sistema, possiamo utilizzare ancora il comando ``ps`` (vedi [lezione sui comandi shell](../../SO-ES1-Introduzione-Linux/2_comandi_shell#comandi-di-utilità-per-i-processi-ps-e-top))
+Per poter analizzare i PID associati ai processi attualmente sul sistema, possiamo utilizzare ancora il comando ``ps`` (vedi [lezione sui comandi shell](../../SO-ES01-Introduzione-Linux/2_comandi_shell#comandi-di-utilità-per-i-processi-ps-e-top))
 
 Oltre al comando ``ps``, è possibile analizzare la directory ``/proc`` che, per ogni processo nel sistema, contiene una directory denominata proprio con il PID del processo, e.g.:
 
