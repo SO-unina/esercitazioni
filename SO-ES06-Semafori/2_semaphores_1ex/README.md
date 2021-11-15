@@ -2,9 +2,9 @@
 
 In questo esercizio, si implementa una comunicazione inter-processo utilizzando una shared memory, disciplinando l'accesso con un semaforo. In particolare, si vuole creare 2 processi figli che incrementano per 100 volte una variable intera memorizzata nella shared memory.
 
-Nei file [procedure.h](procedure.h) e [procedure.c](procedure.c) sono definite e implementate le operazioni di *wait* e *signal* su semaforo.
+Nei file [semafori.h](semafori.h) e [semafori.c](semafori.c) sono definite e implementate le operazioni di *wait* e *signal* su semaforo.
 
-Nel file [semafori.c](semafori.c) è implementato il *main* del programma richiesto.
+Nel file [main.c](main.c) è implementato il *main* del programma richiesto.
 
 Alcune domande:
 
