@@ -44,7 +44,6 @@ int main(int argc, char * argv[]){
     int sem, id_shared, id_shared_str, k, numsem;
     
     key_t chiave_shm_buf = ftok(".", 'a');
-    key_t chiave_shm_str = ftok(".", 'b');
     key_t c_sem = ftok(".", 'c');
     
     int status, numprocessi;

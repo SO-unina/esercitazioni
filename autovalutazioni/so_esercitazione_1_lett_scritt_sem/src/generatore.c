@@ -46,7 +46,6 @@ int main(int argc, char * argv[]){
     printf("[generatore] Sono il GENERATORE. Stringa len: %d, Il mio pid %d \n", len, getpid());
     
     key_t chiave_shm_buf = ftok(".", 'a');
-    key_t chiave_shm_str = ftok(".", 'b');
     key_t c_sem = ftok(".", 'c');
     
     int status, numprocessi;
