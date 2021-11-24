@@ -24,7 +24,7 @@ int main(){
     pid_t pid;
     Buffer *buf;
 
-    int num_processi = 3;
+    int num_processi = 4;
 
     //richiesta del buffer
     id_shared = shmget(chiave_shm_buf, sizeof(Buffer), IPC_CREAT | 0664);
