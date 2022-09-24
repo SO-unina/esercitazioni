@@ -2,7 +2,7 @@
 
 ###### Docenti: Domenico Cotroneo, Marcello Cinque, Roberto Natella
 
-**Ultimo aggiornamento: 07/10/2020**
+**Ultimo aggiornamento: 24/09/2021**
 
 > **_N.B.:_** Per poter eseguire una macchina virtuale è necessario abilitare le estensioni di virtualizzazione della macchina fisica. Queste estensioni vanno abilitate dal BIOS all'avvio della macchina. Seguire una guida qualsiasi in base al modello del PC.
 
@@ -10,12 +10,63 @@ La macchina virtuale ospita il sistema operativo **Ubuntu 20.04 LTS** (una distr
 
 La macchina è contenuta in un file con estensione **.ova** da scaricare tramite i seguenti link: 
 
-- [LINK1](https://communitystudentiunina-my.sharepoint.com/personal/roberto_natella_unina_it/Documents/Ubuntu-Linux-20-04-SO.ova), consigliata per macchine con hardware di più alto livello (8+ CPU fisiche, 8GB RAM)
-- [LINK2](XXX), consigliata per macchine con hardware (4 CPU fisiche, 4GB RAM);
+- [LINK1](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/cotroneo_unina_it/EVOhRSyGCqlKrJM2ZRM8WsABgam-3wQXdj9SFA_VrmUFjA?e=1n8HlG)
+- [LINK2](http://gofile.me/2wkf8/tAaj2DHeb)
 
-Tale file è stato creato per mezzo del programma **Oracle VirtualBox**, che deve essere installato sulla macchina su cui si intende far girare la macchina virtuale. L'applicativo VirtualBox è un gestore di macchine virtuali gratuito e facilmente installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)).
+E' possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
 
-La versione raccomandata di VirtualBox (su cui è stata creata la macchina virtuale) è la versione **6.1**.
+<p align="center">
+<img src="../images/image009.png" width="500" > 
+</p>
+
+
+Per importare la macchina virtuale in VMware Workstation Player, si selezioni la voce **Importa...**.
+
+<p align="center">
+<img src="../images/image010.png" width="300" > 
+</p>
+
+
+Si aprirà una nuova finestra, in cui accorrerà scegliere il file **.ova** della macchina virtuale.
+
+<p align="center">
+<img src="../images/image011.png" width="500" > 
+</p>
+
+
+Nel caso dovesse apparire il seguente popup sulla verifica di conformità, selezionare l'opzione **Riprova** per forzare l'importazione.
+
+<p align="center">
+<img src="../images/image012.png" width="300" > 
+</p>
+
+
+L'importazione della macchina virtuale potrebbe richiedere svariati minuti, dipendentemente dalla potenza della macchine fisica ospitante.
+
+<p align="center">
+<img src="../images/image013.png" width="500" > 
+</p>
+
+
+Al termine dell'operazione, è possibile scegliere di personalizzare l'hardware virtuale da utilizzare per la VM importata oppure proseguire con i valori di default. La raccomandazione è quella di avere almeno 2 CPU virtuali e almeno 2Gb di memoria RAM.
+
+<p align="center">
+<img src="../images/image014.png" width="500" > 
+</p>
+
+
+La macchina virtuale dovrà apparire correttamente nella libreria di VMware Workstation Player.
+
+Per VMWare è possibile installare le guest additions, che sono chiamate **VMware Tools** (vedi Figura seguente).
+
+<p align="center">
+<img src="../images/image016.jpg" width="500" > 
+</p>
+
+
+In alternativa a VMWare Workstation Player, è possibile utilizzare l'applicativo VirtualBox, installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)).
+
+La versione raccomandata di VirtualBox è la versione **6.1**.
 
 Una volta installato VirtualBox è possibile **importare** la macchina virtuale, scegliendo ' **File -> Importa applicazione virtuale**' come in figura:
 
@@ -64,56 +115,6 @@ E' possibile installare le cosiddette Guest Additions che permettono di avere tu
 <img src="../images/image015.png" width="500" > 
 </p>
 
-
-In alternativa a VirtualBox, è possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
-
-<p align="center">
-<img src="../images/image009.png" width="500" > 
-</p>
-
-
-Per importare la macchina virtuale in VMware Workstation Player, si selezioni la voce **Importa...**.
-
-<p align="center">
-<img src="../images/image010.png" width="300" > 
-</p>
-
-
-Si aprirà una nuova finestra, in cui accorrerà scegliere il file **.ova** della macchina virtuale.
-
-<p align="center">
-<img src="../images/image011.png" width="500" > 
-</p>
-
-
-Nel caso dovesse apparire il seguente popup sulla verifica di conformità, selezionare l'opzione **Riprova** per forzare l'importazione.
-
-<p align="center">
-<img src="../images/image012.png" width="300" > 
-</p>
-
-
-L'importazione della macchina virtuale potrebbe richiedere svariati minuti, dipendentemente dalla potenza della macchine fisica ospitante.
-
-<p align="center">
-<img src="../images/image013.png" width="500" > 
-</p>
-
-
-Come per VirtualBox, al termine dell'operazione, è possibile scegliere di personalizzare l'hardware virtuale da utilizzare per la VM importata oppure proseguire con i valori di default. La raccomandazione è quella di avere almeno 2 CPU virtuali e almeno 2Gb di memoria RAM.
-
-<p align="center">
-<img src="../images/image014.png" width="500" > 
-</p>
-
-
-La macchina virtuale dovrà apparire correttamente nella libreria di VMware Workstation Player.
-
-Anche per VMWare è possibile installare le guest additions, che sono chiamate **VMware Tools** (vedi Figura seguente).
-
-<p align="center">
-<img src="../images/image016.jpg" width="500" > 
-</p>
 
 
 > **_N.B.:_** Per effettuare operazioni di amministrazione (ad esempio, installazione di pacchetti, il comando sudo, etc.), se richiesta, si utilizzi la password ' **studente**' (nome utente: ' **studente**').
