@@ -2,7 +2,7 @@
 
 ###### Docenti: Domenico Cotroneo, Marcello Cinque, Roberto Natella
 
-**Ultimo aggiornamento: 24/09/2021**
+**Ultimo aggiornamento: 26/09/2023**
 
 > **_N.B.:_** Per poter eseguire una macchina virtuale è necessario abilitare le estensioni di virtualizzazione della macchina fisica. Queste estensioni vanno abilitate dal BIOS all'avvio della macchina. Seguire una guida qualsiasi in base al modello del PC.
 
