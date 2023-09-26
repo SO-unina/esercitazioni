@@ -10,7 +10,7 @@ La macchina virtuale ospita il sistema operativo **LUbuntu 20.04.3 LTS** (una di
 
 La macchina è contenuta in un file con estensione **.ova** da scaricare tramite i seguenti link: 
 
-- [LINK1](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/cotroneo_unina_it/EVOhRSyGCqlKrJM2ZRM8WsABgam-3wQXdj9SFA_VrmUFjA?e=1n8HlG)
+- [LINK1](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/luigi_desimone_unina_it/EV_LYad3qOBItB35bpThvJAB1UTKdsF7fXyM5w4RHdjiPA?e=T8re5k)
 - [LINK2](http://gofile.me/2wkf8/tAaj2DHeb)
 
 E' possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
