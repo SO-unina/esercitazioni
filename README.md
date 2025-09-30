@@ -26,4 +26,4 @@ Sommario delle esercitazioni:
 
 
 
-> **_N.B.:_** Vuoi usare VIM come editor testuale? Utilizza questo [cheatsheet](images/vim_cheatsheet.png) per una guida veloce sui comandi più comuni di VIM e gioca a [vim adventures](https://vim-adventures.com/) per allenarti ad usare VIM.
+> **_N.B.:_** Vuoi usare VIM come editor testuale? Utilizza questo [cheatsheet](images/vim_cheatsheet.png) per una guida veloce sui comandi più comuni di VIM e gioca a [vim adventures](https://vim-adventures.com/) per allenarti ad usare VIM. Successivamente, esplora tutte le potenzialità di VIM utilizzando questa serie di [plugin](https://github.com/amix/vimrc)
