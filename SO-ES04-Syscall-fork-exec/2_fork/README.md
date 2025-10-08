@@ -100,7 +100,9 @@ pid_t wait(int *wstatus);
 
 La system call ``wait()`` sospende l'esecuzione del processo chiamante fino a che uno dei suoi processi figli termina. Essa restituisce il PID del processo figlio che è terminato; se non esistono figli, o in caso di errore viene restituito l'intero ``–1``.
 
-Se il valore di ``wstatus`` è non nullo (``NULL``), la funzione ``wait()`` memorizza nel valore intero puntato da tale variabile le informazioni sullo stato del processo. Questo valore può essere analizzato utilizzando diverse macro, come ad esempio ``WIFEXITED(wstatus)`` che restituisce il valore booleano ``true`` se il processo figlio è terminato normalmente, attraverso la chiamata ad ``exit()`` o dal return dal ``main()``.
+Se il valore di ``wstatus`` è non nullo (``NULL``), la funzione ``wait()`` memorizza nel valore intero puntato da tale variabile le informazioni sullo stato del processo. Questo valore può essere analizzato utilizzando diverse macro, come ad esempio:
+- ``WIFEXITED(wstatus)`` che restituisce il valore booleano ``true`` se il processo figlio è terminato normalmente, attraverso la chiamata ad ``exit()`` o dal return dal ``main()``
+- ``WEXITSTATUS(wstatus)`` che restituisce un valore intero che rappresenta l'exit status code utilizzato con la chiamata a exit() (e.g., exit(42) indica che WEXITSTATUS(wstatus) restituirà 42)
 
 Inoltre, la variabile ``wstatus`` contiene il valore passato dal processo figlio alla system call ``exit()``
 Ci sono alcuni casi da considerare:
@@ -128,5 +130,6 @@ Nel caso in cui il figlio termini volontariamente, il byte più significativo co
 
 <p align="center">
 <img src="../images/wait_and_exit.png" width="300" > 
+
 <img src="../images/fork_wait_exit.png" width="200" > 
 </p>

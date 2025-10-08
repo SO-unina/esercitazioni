@@ -1,17 +1,18 @@
 # Istruzioni per uso della macchina virtuale a supporto della parte esercitativa del corso di Sistemi Operativi
 
-###### Docenti: Domenico Cotroneo, Marcello Cinque, Roberto Natella
-
-**Ultimo aggiornamento: 24/09/2021**
+###### Docenti: Domenico Cotroneo, Marcello Cinque, Luigi De Simone, Roberto Natella
 
 > **_N.B.:_** Per poter eseguire una macchina virtuale è necessario abilitare le estensioni di virtualizzazione della macchina fisica. Queste estensioni vanno abilitate dal BIOS all'avvio della macchina. Seguire una guida qualsiasi in base al modello del PC.
 
-La macchina virtuale ospita il sistema operativo **LUbuntu 20.04.3 LTS** (una distribuzione leggera di **Ubuntu Linux** ), e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.). L'username e password dell'utente di default sono rispettivamente **studente** e **studente**.
+La macchina virtuale ospita il sistema operativo **Debian GNU/Linux 12**, e contiene al suo interno i principali pacchetti software utili per il corso (shell, compilatore, debugger, etc.). L'username e password dell'utente di default sono rispettivamente **studente** e **studente**.
 
 La macchina è contenuta in un file con estensione **.ova** da scaricare tramite i seguenti link: 
 
-- [LINK1](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/cotroneo_unina_it/EVOhRSyGCqlKrJM2ZRM8WsABgam-3wQXdj9SFA_VrmUFjA?e=1n8HlG)
-- [LINK2](http://gofile.me/2wkf8/tAaj2DHeb)
+- [LINK1 file .ova](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/luigi_desimone_unina_it/EdizLTSD7bpFiWYc6FfUpeABP2cuyZ2Cm00Fjbk00mHl_A?e=NXHWcY&isSPOFile=1&xsdata=MDV8MDJ8fDMyYTk5NWE0OGQxYzQ5NWMzMmMyMDhkZDY2ZmU1ODc2fDJmY2ZlMjZhYmI2MjQ2YjBiMWUzMjhmOWRhMGM0NWZkfDB8MHw2Mzg3Nzk5NjQ3NDgzNDYwNTB8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMM1JsWVcxekx6RTVPbEJ6YVdWNE56UkJNakJ2VFdkNlNDMWhlR2QyZUdSMFprOW9aalZpYjBoWVJUQTVjMmhwT0Rac1dUUXhRSFJvY21WaFpDNTBZV04yTWk5amFHRnVibVZzY3k4eE9UcFFjMmxsZURjMFFUSXdiMDFuZWtndFlYaG5kbmhrZEdaUGFHWTFZbTlJV0VVd09YTm9hVGcyYkZrME1VQjBhSEpsWVdRdWRHRmpkakl2YldWemMyRm5aWE12TVRjME1UWXdNemswTmpJNU9BPT18MDAyYTk2MTE4MDk0NDdkYWQwOTYwOGRkNjZmZTU4NzN8MjM2MDQxMGI5ZjdkNGQ0OGJjMDE2MzBkZTQ4ZmRkMmQ%3D&sdata=SlVFWWdTOVhXZ2NOOFMyRzlmeWNOelJCMitQd0V0SHVJME1JUnkxUVg3ND0%3D&ovuser=2fcfe26a-bb62-46b0-b1e3-28f9da0c45fd%2Cluigi.desimone%40unina.it)
+
+- [LINK2 file .zip](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/luigi_desimone_unina_it/EdizLTSD7bpFiWYc6FfUpeABP2cuyZ2Cm00Fjbk00mHl_A?e=NXHWcY&isSPOFile=1&xsdata=MDV8MDJ8fDMyYTk5NWE0OGQxYzQ5NWMzMmMyMDhkZDY2ZmU1ODc2fDJmY2ZlMjZhYmI2MjQ2YjBiMWUzMjhmOWRhMGM0NWZkfDB8MHw2Mzg3Nzk5NjQ3NDgzNDYwNTB8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMM1JsWVcxekx6RTVPbEJ6YVdWNE56UkJNakJ2VFdkNlNDMWhlR2QyZUdSMFprOW9aalZpYjBoWVJUQTVjMmhwT0Rac1dUUXhRSFJvY21WaFpDNTBZV04yTWk5amFHRnVibVZzY3k4eE9UcFFjMmxsZURjMFFUSXdiMDFuZWtndFlYaG5kbmhrZEdaUGFHWTFZbTlJV0VVd09YTm9hVGcyYkZrME1VQjBhSEpsWVdRdWRHRmpkakl2YldWemMyRm5aWE12TVRjME1UWXdNemswTmpJNU9BPT18MDAyYTk2MTE4MDk0NDdkYWQwOTYwOGRkNjZmZTU4NzN8MjM2MDQxMGI5ZjdkNGQ0OGJjMDE2MzBkZTQ4ZmRkMmQ%3D&sdata=SlVFWWdTOVhXZ2NOOFMyRzlmeWNOelJCMitQd0V0SHVJME1JUnkxUVg3ND0%3D&ovuser=2fcfe26a-bb62-46b0-b1e3-28f9da0c45fd%2Cluigi.desimone%40unina.it)
+
+- [LINK3 file UTM (per M1/M2)](https://communitystudentiunina-my.sharepoint.com/:u:/g/personal/raffaele_dellacorte2_unina_it/Ed6eLzyolaJGlIc8hjpleRUBs9iHSlPjfsB_1bj5sIZyyQ?e=yfIRLT&isSPOFile=1&xsdata=MDV8MDJ8fDMyYTk5NWE0OGQxYzQ5NWMzMmMyMDhkZDY2ZmU1ODc2fDJmY2ZlMjZhYmI2MjQ2YjBiMWUzMjhmOWRhMGM0NWZkfDB8MHw2Mzg3Nzk5NjQ3NDg1MDIzNjJ8VW5rbm93bnxWR1ZoYlhOVFpXTjFjbWwwZVZObGNuWnBZMlY4ZXlKV0lqb2lNQzR3TGpBd01EQWlMQ0pRSWpvaVYybHVNeklpTENKQlRpSTZJazkwYUdWeUlpd2lWMVFpT2pFeGZRPT18MXxMM1JsWVcxekx6RTVPbEJ6YVdWNE56UkJNakJ2VFdkNlNDMWhlR2QyZUdSMFprOW9aalZpYjBoWVJUQTVjMmhwT0Rac1dUUXhRSFJvY21WaFpDNTBZV04yTWk5amFHRnVibVZzY3k4eE9UcFFjMmxsZURjMFFUSXdiMDFuZWtndFlYaG5kbmhrZEdaUGFHWTFZbTlJV0VVd09YTm9hVGcyYkZrME1VQjBhSEpsWVdRdWRHRmpkakl2YldWemMyRm5aWE12TVRjME1UWXdNemswTmpJNU9BPT18MDAyYTk2MTE4MDk0NDdkYWQwOTYwOGRkNjZmZTU4NzN8MjM2MDQxMGI5ZjdkNGQ0OGJjMDE2MzBkZTQ4ZmRkMmQ%3D&sdata=akhSdEhQRm4rWkszR3BGZ1ZEN21oWlk1ODVVOFhDaFk5VjZJcm5FN0pXZz0%3D&ovuser=2fcfe26a-bb62-46b0-b1e3-28f9da0c45fd%2Cluigi.desimone%40unina.it)
 
 E' possibile eseguire la macchina virtuale utilizzando il programma **VMware Workstation Player** (per Windows e Linux). Il programma è gratuitamente scaricabile da internet.
 
@@ -66,7 +67,7 @@ Per VMWare è possibile installare le guest additions, che sono chiamate **VMwar
 
 In alternativa a VMWare Workstation Player, è possibile utilizzare l'applicativo VirtualBox, installabile scaricando il programma di installazione dal sito internet della Oracle ([https://www.virtualbox.org/wiki/Downloads](https://www.virtualbox.org/wiki/Downloads)).
 
-La versione raccomandata di VirtualBox è la versione **6.1**.
+La versione raccomandata di VirtualBox è quella più recente.
 
 Una volta installato VirtualBox è possibile **importare** la macchina virtuale, scegliendo ' **File -> Importa applicazione virtuale**' come in figura:
 
