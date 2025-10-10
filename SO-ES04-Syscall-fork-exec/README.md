@@ -7,4 +7,5 @@ Sommario degli esempi:
 - [**1_getpid**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES04-Syscall-fork-exec/1_getpid): Utilizzo della system call ``getpid()``;
 - [**2_fork**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES04-Syscall-fork-exec/2_fork): Utilizzo delle system call ``fork()``, ``wait()``, e ``exit()``;
 - [**3_exec**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES04-Syscall-fork-exec/3_exec): Utilizzo della famiglia di system call ``exec()``.
+- [**4_shell**](https://github.com/SO-unina/esercitazioni/tree/main/SO-ES04-Syscall-fork-exec/4_shell): Implementazione di una shell.
 
