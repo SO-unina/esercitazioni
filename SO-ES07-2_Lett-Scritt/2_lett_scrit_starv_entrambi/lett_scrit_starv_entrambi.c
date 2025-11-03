@@ -55,10 +55,10 @@ int main(){
         id_sem=semget(c_sem, 4, IPC_CREAT | 0664);
 
         //   inizializzazione
-        semctl(id_sem, SYNCH, SETVAL, 1);
-        semctl(id_sem, MUTEXL, SETVAL, 1);
-        semctl(id_sem, MUTEXS, SETVAL, 1);
-        semctl(id_sem, MUTEX, SETVAL, 1);
+        semctl(id_sem, MUTEX_LETTORI_SCRITTORI, SETVAL, 1);
+        semctl(id_sem, MUTEX_NUMLETTORI, SETVAL, 1);
+        semctl(id_sem, MUTEX_NUMSCRITTORI, SETVAL, 1);
+        semctl(id_sem, MUTEX_SCRITTORI, SETVAL, 1);
 
 
 

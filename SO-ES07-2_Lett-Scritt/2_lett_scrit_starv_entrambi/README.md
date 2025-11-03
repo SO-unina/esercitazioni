@@ -18,19 +18,19 @@ In particolare, in questo esercizio affrontiamo lo scenario in cui abbiamo **sta
 *Scrivere un’applicazione concorrente che implementi il problema dei Lettori/Scrittori con starvation di entrambi.
 Il programma crei dei processi che agiscano da lettori e scrittori utilizzando un unico buffer di memoria in cui sono memorizzati valori di tipo long. Il buffer di memoria è creato attraverso una shared memory e la sincronizzazione tra produttori e consumatori deve avvenire tramite l'utilizzo di semafori.*
 
-Per risolvere tale problema, si utilizza una variable condivisa ``NUM_LETTORI`` per contare il numero di lettori che contemporaneamente accedono alla risorsa. 
-Solo quando nessun lettore è in attesa di leggere (``NUM_LETTORI == 0``), gli scrittori potranno accedere (sempre uno alla volta) alla risorsa condivisa per poter scrivere.
-Rispetto alla soluzione con starvation dei soli scrittori, anche per gli scrittori si può ottenere un comportamento analogo ai lettori, introducendo una variabile ``NUM_SCRITTORI``
+Per risolvere tale problema, si utilizza una variable condivisa ``numlettori`` per contare il numero di lettori che contemporaneamente accedono alla risorsa. 
+Solo quando nessun lettore è in attesa di leggere (``numlettori == 0``), gli scrittori potranno accedere (sempre uno alla volta) alla risorsa condivisa per poter scrivere.
+Rispetto alla soluzione con starvation dei soli scrittori, anche per gli scrittori si può ottenere un comportamento analogo ai lettori, introducendo una variabile ``numscrittori``
 
 In questo scenario occorrono 4 semafori, tutti inizializzati a ``1``:
 
-- ``MUTEXL`` usato per gestire l'accesso alla variabile ``NUM_LETTORI`` in mutua esclusione da parte dei lettori;
+- ``MUTEX_NUMLETTORI`` usato per gestire l'accesso alla variabile ``numlettori`` in mutua esclusione da parte dei lettori;
 
-- ``MUTEXS`` per gestire l’accesso alla variabile ``NUM_SCRITTORI`` in mutua esclusione da parte degli scrittori
+- ``MUTEX_NUMSCRITTORI`` per gestire l’accesso alla variabile ``numscrittori`` in mutua esclusione da parte degli scrittori
 
-- ``MUTEX`` per gestire l’accesso in mutua esclusione alla risorsa condivisa da parte degli scrittori;
+- ``MUTEX_SCRITTORI`` per gestire l’accesso in mutua esclusione alla risorsa condivisa da parte degli scrittori;
 
-- ``SYNCH`` per garantire la mutua esclusione tra i processi lettori e scrittori.
+- ``MUTEX_LETTORI_SCRITTORI`` per garantire la mutua esclusione tra i processi lettori e scrittori.
 
 Le operazioni di lettura sono sempre "protette" dalle procedure di ``Inizio_Lettura()`` e ``Fine_Lettura()``, mentre le operazioni di scrittura sono sempre "protette" da ``Inizio_Scrittura()`` e ``Fine_Scrittura()``.
 
@@ -74,8 +74,3 @@ Valore letto=<842565>, numero lettori=5
  Figlio n.ro 9742 e' morto con status= 0
  Figlio n.ro 9738 e' morto con status= 0
 ```
-
-
-
-
-

@@ -2,10 +2,10 @@
 #define _HEADER_H_
 
 #define NUM_VOLTE 3
-#define SYNCH 0
-#define MUTEXS 1
-#define MUTEXL 2
-#define MUTEX  3
+#define MUTEX_LETTORI_SCRITTORI 0
+#define MUTEX_NUMSCRITTORI 1
+#define MUTEX_NUMLETTORI 2
+#define MUTEX_SCRITTORI  3
 
 typedef long msg;
 

@@ -16,54 +16,57 @@
 
 void InizioLettura(int sem, Buffer* buf){
 	
-        Wait_Sem(sem, MUTEXL); //Indica ai lettori che sto iniziando a leggere, incremento
+        Wait_Sem(sem, MUTEX_NUMLETTORI); //Indica ai lettori che sto iniziando a leggere, incremento
                                 // numlettori in mutua esclusione
         buf->numlettori = buf->numlettori + 1;
 
         if (buf->numlettori == 1) //se si tratta del primo lettore blocca gli scrittori
-            Wait_Sem(sem, SYNCH);
+            Wait_Sem(sem, MUTEX_LETTORI_SCRITTORI);
 
-        Signal_Sem(sem, MUTEXL); //Rilascia il mutex per far entrare altri lettori
+        Signal_Sem(sem, MUTEX_NUMLETTORI); //Rilascia il mutex per far entrare altri lettori
 }
 
 void FineLettura(int sem, Buffer* buf){
 
-        Wait_Sem(sem, MUTEXL); //Indica ai lettori che sto terminando la lettura, decremento
+        Wait_Sem(sem, MUTEX_NUMLETTORI); //Indica ai lettori che sto terminando la lettura, decremento
                                 // numlettori in mutua esclusione
         buf->numlettori = buf->numlettori - 1;
 
         if (buf->numlettori == 0) //se sono l'ultimo lettore devo rilasciare la risorsa per gli scrittori
-     		Signal_Sem(sem, SYNCH);
+     		Signal_Sem(sem, MUTEX_LETTORI_SCRITTORI);
 
-        Signal_Sem(sem, MUTEXL); //rilascio il mutex per altri lettori che vogliono iniziare la lettura
+        Signal_Sem(sem, MUTEX_NUMLETTORI); //rilascio il mutex per altri lettori che vogliono iniziare la lettura
 }
 
 //Procedure di inizio e fine scrittura
 
 void InizioScrittura(int sem, Buffer* buf){
 	
-        Wait_Sem(sem,MUTEXS); //Indica agli scrittori che sto iniziando a scrivere, incremento
+        Wait_Sem(sem, MUTEX_NUMSCRITTORI); //Indica agli scrittori che sto iniziando a scrivere, incremento
                                 // numscrittori in mutua esclusione
         buf->numscrittori = buf->numscrittori + 1;
         
 	    if (buf->numscrittori == 1) // se si tratta del primo scrittore blocca i lettori
-            Wait_Sem(sem, SYNCH);
+            	Wait_Sem(sem, MUTEX_LETTORI_SCRITTORI);
 
-        Signal_Sem(sem,MUTEXS); //Rilascia il mutex per far entrare altri scrittori per potersi mettere in attesa
-        Wait_Sem(sem,MUTEX); //Blocco eventuali scrittori per la scrittura vera e propria
+        Signal_Sem(sem, MUTEX_NUMSCRITTORI); //Rilascia il mutex per far entrare altri scrittori per potersi mettere in attesa
+
+        Wait_Sem(sem, MUTEX_SCRITTORI); //Blocco eventuali scrittori per la scrittura vera e propria
 }
 
 void FineScrittura(int sem, Buffer* buf){
 
-        Signal_Sem(sem,MUTEX); //Rilascio il mutex per gli scrittori che devono scrivere
-        Wait_Sem(sem,MUTEXS); //Indica agli scrittori che sto terminando la scrittura, decremento
-                                // numscrittori in mutua esclusione
+        Signal_Sem(sem,MUTEX_SCRITTORI); //Rilascio il mutex per gli scrittori che devono scrivere
+        
+	Wait_Sem(sem, MUTEX_NUMSCRITTORI); //Indica agli scrittori che sto terminando la scrittura, decremento
+                                	// numscrittori in mutua esclusione
+
         buf->numscrittori = buf->numscrittori - 1;
 
         if (buf->numscrittori == 0) //se sono l'ultimo scrittore devo rilasciare la risorsa per i lettori
-     		Signal_Sem(sem, SYNCH);
+     		Signal_Sem(sem, MUTEX_LETTORI_SCRITTORI);
 
-        Signal_Sem(sem,MUTEXS); //rilascio il mutex per altri scrittori che vogliono iniziare la scrittura
+        Signal_Sem(sem, MUTEX_NUMSCRITTORI); //rilascio il mutex per altri scrittori che vogliono iniziare la scrittura
 }
 
 
