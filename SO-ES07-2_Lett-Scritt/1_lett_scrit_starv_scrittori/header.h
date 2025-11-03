@@ -1,7 +1,7 @@
 		/*-------HEADER FILE-------------*/
 
-#define MUTEXL 0
-#define SYNCH 1
+#define MUTEX_NUMLETTORI 0
+#define MUTEX_LETTORI_SCRITTORI 1
 #define NUM_VOLTE 6
 
 

@@ -51,8 +51,8 @@ int main(){
 
         //richiesta di due semafori ed inizializzazione
         sem=semget(c_sem, 2, IPC_CREAT | 0664);
-        semctl(sem, MUTEXL, SETVAL, 1);
-        semctl(sem, SYNCH, SETVAL, 1);
+        semctl(sem, MUTEX_NUMLETTORI, SETVAL, 1);
+        semctl(sem, MUTEX_LETTORI_SCRITTORI, SETVAL, 1);
 
         //generazione di scrittori e lettori
         for (k=0; k<num_processi; k++) {
