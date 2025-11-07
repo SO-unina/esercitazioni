@@ -132,7 +132,8 @@ void Cliente() {
 
 	sleep(1);
 
-
+	Wait_Sem(id_sem, MUTEX);
+	
 	for(j=0; j<numposti; j++) {
 		p = postiscelti[j];
 		posti[p].stato = OCCUPATO;
@@ -140,4 +141,5 @@ void Cliente() {
 		printf("<%d> Ho occupato il posto %d\n", getpid(), p);
 	}
 
+	Signal_Sem(id_sem, MUTEX);
 }
