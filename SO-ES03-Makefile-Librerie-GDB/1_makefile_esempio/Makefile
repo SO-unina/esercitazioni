@@ -1,13 +1,13 @@
 all: start
 
 start: lib.o main.o
-	g++ -o start lib.o main.o
+	gcc -o start lib.o main.o
 
-lib.o: lib.cpp lib.h
-	g++ -c lib.cpp
+lib.o: lib.c lib.h
+	gcc -c lib.c
 
-main.o: main.cpp lib.h
-	g++ -c main.cpp
+main.o: main.c lib.h
+	gcc -c main.c
 
 clean:
 	rm -f *.o

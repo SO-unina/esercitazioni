@@ -1,5 +1,5 @@
-CPP = g++
-CPPFLAGS = -c -o
+C = gcc
+CFLAGS = -c -o
 LDFLAGS = -o
 DEPS = lib.h
 OBJ = lib.o main.o
@@ -9,7 +9,7 @@ all: start
 start: $(OBJ)
 	$(CPP) $(LDFLAGS) $@ $^
 
-%.o: %.cpp $(DEPS)
+%.o: %.c $(DEPS)
 	$(CPP) $(CPPFLAGS) $@ $<
 
 clean:

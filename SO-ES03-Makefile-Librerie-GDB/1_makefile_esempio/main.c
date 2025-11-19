@@ -14,8 +14,8 @@ int main (){
 
 	do {
 		//Inserimento riempimento 
-		cout<<"\nInserire il numero degli elementi : ";
-		cin>>n;
+		printf("\nInserire il numero degli elementi : ");
+		scanf("%d", &n;
 	} while (n>30); //il riempimento deve essere minore o uguale alla cardinalita'
 	
 	leggi_vettore(a,n);
