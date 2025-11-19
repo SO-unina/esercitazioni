@@ -21,7 +21,11 @@ void produttore(struct prodcons * p, int ds_sem) {
     
     Wait_Sem(ds_sem, MUTEX_P);
     
-    while(indice <= DIM_BUFFER && p->stato[indice] != BUFFER_VUOTO) {
+    while(indice < DIM_BUFFER && p->stato[indice] != BUFFER_VUOTO) {
+        /*
+            indice < DIM_BUFFER non dovrebbe mai capitare, ma è importante evitare SEMPRE di leggere fuori dal buffer (crash o comportamento indefinito) e 
+            con la guardia usciamo dal ciclo senza danni.
+        */
         indice++;
     }
     
@@ -54,7 +58,11 @@ void consumatore(struct prodcons * p, int ds_sem) {
     
     Wait_Sem(ds_sem, MUTEX_C);
     
-    while(indice <= DIM_BUFFER && p->stato[indice] != BUFFER_PIENO) {
+    while(indice < DIM_BUFFER && p->stato[indice] != BUFFER_PIENO) {
+        /*
+            indice < DIM_BUFFER non dovrebbe mai capitare, ma è importante evitare SEMPRE di leggere fuori dal buffer (crash o comportamento indefinito) e 
+            con la guardia usciamo dal ciclo senza danni.
+        */
         indice++;
     }
     
